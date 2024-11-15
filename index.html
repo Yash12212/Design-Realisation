@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- This declaration tells the browser that this is an HTML5 document -->
+
+<html lang="en">
+<!-- The <html> tag is the root element of an HTML page -->
+<!-- The lang attribute specifies the language of the document -->
+
+<head>
+    <!-- The <head> element contains meta information about the HTML page -->
+    
+    <meta charset="UTF-8">
+    <!-- This meta tag specifies the character encoding for the HTML document -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This meta tag ensures proper rendering on mobile devices -->
+    
+    <title>Digital Privacy & Security</title>
+    <!-- The <title> element specifies a title for the HTML page (shown in the browser's title bar or page's tab) -->
+    
+    <style>
+        /* CSS styles are defined here */
+        /* These styles control the appearance of various HTML elements */
+        
+        body {
+            font-family: Arial, sans-serif; /* Sets the font for the entire body */
+            line-height: 1.6; /* Sets the line spacing */
+            color: #333; /* Sets the text color */
+            max-width: 800px; /* Limits the maximum width of the content */
+            margin: 0 auto; /* Centers the content horizontally */
+            padding: 20px; /* Adds space around the content */
+        }
+        
+        header, footer {
+            background-color: #000080; /* Navy blue background for header and footer */
+            color: #ffffff; /* White text for header and footer */
+            text-align: center;
+            padding: 1rem; /* Adds space inside the header and footer */
+        }
+        
+        nav {
+            background-color: #e6e6e6; /* Light gray background for navigation */
+            padding: 0.5rem;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style-type: none; /* Removes bullet points from the list */
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav ul li {
+            display: inline-block; /* Makes list items appear horizontally */
+            margin: 0 10px; /* Adds space between list items */
+        }
+        
+
+        nav ul li a {
+            text-decoration: none; /* Removes underline from links */
+            color: #000080; /* Navy blue text for links */
+            font-weight: bold;
+            transition: color 0.3s ease; /* Smooth transition for color change */
+        }
+        
+        nav ul li a:hover {
+            color: #0000ff; /* Lighter blue on hover */
+        }
+        
+        details {
+            margin-bottom: 1rem; /* Adds space below each details element */
+            transition: background-color 0.3s ease; /* Smooth transition for background color change */
+        }
+        
+        details[open] {
+            background-color: #f9f9f9; /* Light gray background when details are open */
+        }
+        
+        summary {
+            background-color: #f1f1f1; /* Light gray background for summary */
+            color: #000080; /* Navy blue text for summary */
+            padding: 0.5rem;
+            cursor: pointer; /* Changes cursor to pointer on hover */
+            transition: background-color 0.3s ease; /* Smooth transition for background color change */
+        }
+        
+        summary:hover {
+            background-color: #e6e6e6; /* Darker gray on hover */
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- The <body> element defines the document's body, which contains all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc. -->
+    
+    <header>
+        <!-- The <header> element represents a container for introductory content or a set of navigational links -->
+        <marquee behavior="alternate" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
+            <h1>Digital Privacy & Security</h1>
+        </marquee>
+    </header>
+    
+    <marquee direction="left" scrollamount="3" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();">
+        <p>Empower yourself with essential knowledge and tools to protect your digital privacy and security in our interconnected world!</p>
+    </marquee>
+    
+    <nav>
+        <!-- The <nav> element defines a set of navigation links -->
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="threats.html">Threats</a></li>
+            <li><a href="best-practices.html">Best Practices</a></li>
+            <li><a href="resources.html">Resources</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <!-- The <main> element specifies the main content of a document -->
+        <h2>Welcome to Digital Privacy & Security</h2>
+        <p>In today's interconnected world, protecting your digital privacy and ensuring your online security is more important than ever. As technology advances, so do the threats to our digital lives. This website aims to empower you with essential knowledge and practical tools to safeguard your online presence and personal information.</p>
+        <marquee direction="up" scrollamount="2" height="150" onmouseover="this.stop();" onmouseout="this.start();">
+            <p><strong>Digital Privacy:</strong> Protecting personal information in the digital realm.</p>
+            <p><strong>Cybersecurity:</strong> Safeguarding systems, networks, and programs from digital attacks.</p>
+            <p><strong>Data Protection:</strong> Securing sensitive information from unauthorized access and data breaches.</p>
+            <p><strong>Online Safety:</strong> Practicing safe browsing and communication habits on the internet.</p>
+            <p><strong>Identity Protection:</strong> Safeguarding personal identity information from theft and misuse.</p>
+            <p><strong>Digital Footprint:</strong> Managing the trail of data you create while using the Internet.</p>
+        </marquee>
+        
+        <!-- The <details> element specifies additional details that the user can view or hide on demand -->
+        <!-- The <summary> element defines a visible heading for the <details> element -->
+        <details>
+            <summary>Why Digital Privacy Matters</summary>
+            <p>Digital privacy is crucial in our increasingly connected world:</p>
+            <ul>
+                <li>It protects your personal information from unauthorized access, misuse, and data breaches.</li>
+                <li>It preserves your autonomy and freedom of expression online, allowing you to browse and communicate without fear of judgment or repercussion.</li>
+                <li>It safeguards you against identity theft, financial fraud, and other forms of cybercrime.</li>
+                <li>It prevents unwanted surveillance and profiling by corporations, governments, and malicious actors.</li>
+                <li>It gives you control over your digital footprint and how your information is shared and used online.</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>The Importance of Cybersecurity</summary>
+            <p>Cybersecurity is essential for several reasons:</p>
+            <ul>
+                <li>It protects your devices from malware, ransomware, and other cyber attacks that can compromise your data and privacy.</li>
+                <li>It secures your sensitive data, including financial information, personal communications, and confidential documents.</li>
+                <li>It helps maintain the integrity and availability of your digital assets, ensuring you can access your information when needed.</li>
+                <li>It contributes to a safer overall internet ecosystem, making the web more secure for everyone.</li>
+                <li>It safeguards critical infrastructure and services that rely on digital systems, from healthcare to energy grids.</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>The Evolving Landscape of Cybersecurity</summary>
+            <p>The field of cybersecurity is constantly changing:</p>
+            <ul>
+                <li>New threats emerge regularly, requiring continuous adaptation of security measures.</li>
+                <li>Artificial Intelligence and Machine Learning are being used both for attack and defense in cybersecurity.</li>
+                <li>The rise of IoT (Internet of Things) devices has expanded the attack surface for cybercriminals.</li>
+                <li>Privacy regulations like GDPR and CCPA are shaping how organizations handle personal data.</li>
+                <li>Remote work trends have created new challenges for securing corporate networks and data.</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>How This Website Can Help</summary>
+            <p>Our website is designed to be your go-to resource for digital privacy and security:</p>
+            <ul>
+                <li>We provide up-to-date information on common and emerging digital threats, helping you recognize and avoid them.</li>
+                <li>Our best practices guide offers practical, easy-to-implement steps for enhancing your digital privacy and security.</li>
+                <li>We curate and regularly update a list of trusted resources and tools to improve your online safety.</li>
+                <li>Our content is regularly reviewed and updated to reflect the latest trends and developments in cybersecurity.</li>
+                <li>We offer guidance on how to balance convenience with security in your digital life.</li>
+            </ul>
+        </details>
+
+        <p>We encourage you to explore our pages to learn about common threats, adopt best practices, and discover valuable resources to enhance your digital security. Remember, in the digital world, knowledge is your first line of defense.</p>
+    </main>
+
+    <footer>
+        <!-- The <footer> element defines a footer for a document or section -->
+        <p>&copy; 2024 Digital Privacy & Security. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
