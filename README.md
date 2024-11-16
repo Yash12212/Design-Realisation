@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAe-OgPE5riqHvKK8PUOdSV78nE5kAWzcc3A&s" alt="Digital Privacy & Security Guide Logo" width="350"/>
+  <img src="[https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAe-OgPE5riqHvKK8PUOdSV78nE5kAWzcc3A&s](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8pTdxCn7YN3vi69GI3tWHRDuuPP81ISLsZw&s)" alt="Digital Privacy & Security Guide Logo" width="350"/>
 
   # Digital Privacy & Security Guide
 
