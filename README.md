@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8pTdxCn7YN3vi69GI3tWHRDuuPP81ISLsZw&s" alt="Digital Privacy & Security Guide Logo" width="400"/>
 
-  # 🔐 Digital Privacy & Security Guide 🛡️
+  # 🔐 Digital Privacy & Security Guide WebSite 🛡️
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   [![Website](https://img.shields.io/website?url=https%3A%2F%2Fyash12212.github.io%2FDesign-Realisation%2F)](https://yash12212.github.io/Design-Realisation/)
