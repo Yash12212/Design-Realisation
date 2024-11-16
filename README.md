@@ -22,7 +22,6 @@ Key aspects of this guide include:
 - [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [Security](#security)
 - [License](#license)
 - [Contact](#contact)
@@ -78,19 +77,6 @@ To run locally:
 2. Navigate through different sections using the menu provided.
 
 For custom deployment, upload these files to your web server or use a static site hosting service.
-
-## Contributing
-
-We welcome contributions that enhance the content or improve the user experience of this resource. Your insights and expertise can help make this guide even more valuable to our users.
-
-To contribute:
-
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/AmazingFeature`)
-3. Make your changes
-4. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-5. Push to the branch (`git push origin feature/AmazingFeature`)
-6. Open a Pull Request
 
 Please ensure your contributions align with our commitment to providing accurate, up-to-date information on digital privacy and security. For major changes, please open an issue first to discuss what you would like to change.
 
