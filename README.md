@@ -42,7 +42,6 @@ Key aspects of this guide include:
 
 - HTML5
 - CSS3
-- JavaScript
 - Responsive Design Principles
 
 ## Project Structure
