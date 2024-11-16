@@ -1,4 +1,6 @@
- # Digital Privacy & Security Resource
+# Digital Privacy & Security Guide
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
 
@@ -42,7 +44,7 @@ This repository hosts the source code for a comprehensive web-based resource ded
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/digital-privacy-security.git
+   git clone https://github.com/Yash12212/digital-privacy-security.git
    ```
 2. Navigate to the project directory:
    ```
@@ -69,16 +71,16 @@ Please ensure your contributions align with our commitment to providing accurate
 
 ## Security
 
-If you discover any security-related issues, please email security@example.com instead of using the issue tracker. All security vulnerabilities will be promptly addressed.
+If you discover any security-related issues, please open an issue describing the problem without disclosing sensitive details. All security vulnerabilities will be promptly addressed.
 
 ## License
 
-© 2024 Digital Privacy & Security Resource. All rights reserved. 
+© 2024 Digital Privacy & Security Guide. All rights reserved. 
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) - see the LICENSE file for details.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Contact
 
-Project Maintainer - [Your Name](mailto:your.email@example.com)
+Project Maintainer - [Yash12212](https://github.com/Yash12212) (yash12212@gmail.com)
 
-Project Link: [https://github.com/your-username/digital-privacy-security](https://github.com/your-username/digital-privacy-security)
+Project Link: [https://github.com/Yash12212/digital-privacy-security](https://github.com/Yash12212/digital-privacy-security)
