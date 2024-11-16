@@ -164,3 +164,20 @@ We would like to express our gratitude to:
 - Our contributors and users for their feedback and support
 
 Your efforts inspire us to continually improve this guide.
+
+---
+
+<div align="center">
+  Made with ❤️
+  <br>
+  Thank you for your interest in the Digital Privacy & Security Guide. Together, we can create a safer digital world for everyone.
+
+  ```
+   _____ _                 _     __   __          
+  |_   _| |__   __ _ _ __ | | __ \ \ / /__  _   _ 
+    | | | '_ \ / _` | '_ \| |/ /  \ V / _ \| | | |
+    | | | | | | (_| | | | |   <    | | (_) | |_| |
+    |_| |_| |_|\__,_|_| |_|_|\_\   |_|\___/ \__,_|
+  ```
+</div>
+
