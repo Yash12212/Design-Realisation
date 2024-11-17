@@ -1,40 +1,21 @@
 <!DOCTYPE html>
-<!-- This declaration tells the browser that this is an HTML5 document -->
-
 <html lang="en">
-<!-- The <html> tag is the root element of an HTML page -->
-<!-- The lang attribute specifies the language of the document -->
-
 <head>
-    <!-- The <head> element contains meta information about the HTML page -->
-    
     <meta charset="UTF-8">
-    <!-- This meta tag specifies the character encoding for the HTML document -->
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- This meta tag ensures proper rendering on mobile devices -->
-    
     <title>Resources | Digital Privacy & Security</title>
-    <!-- The <title> element specifies a title for the HTML page (shown in the browser's title bar or page's tab) -->
-    
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- The <body> element defines the document's body, which contains all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc. -->
-    
     <header>
-        <!-- The <header> element represents a container for introductory content or a set of navigational links -->
-        <marquee behavior="alternate" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
+        <marquee behavior="alternate" scrollamount="3">
             <h1>Resources</h1>
         </marquee>
     </header>
-    <marquee direction="left" scrollamount="3" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();">
+    <marquee direction="left" scrollamount="3" behavior="scroll">
         <p>Explore our curated list of cybersecurity resources to enhance your digital privacy and security knowledge!</p>
     </marquee>
-    
     <nav>
-        <!-- The <nav> element defines a set of navigation links -->
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="threats.html">Threats</a></li>
@@ -42,12 +23,10 @@
             <li><a href="resources.html">Resources</a></li>
         </ul>
     </nav>
-    
     <main>
-        <!-- The <main> element specifies the main content of a document -->
         <h2>Essential Resources for Digital Privacy and Security</h2>
         <p>Enhance your digital security knowledge and protect your online presence with these carefully curated resources. Remember to regularly update your security practices as the digital landscape evolves.</p>
-        <marquee direction="up" scrollamount="2" height="150" onmouseover="this.stop();" onmouseout="this.start();">
+        <marquee direction="up" scrollamount="4.5" height="150">
             <p><strong>Cybersecurity News:</strong> Stay updated with the latest cybersecurity trends and threats.</p>
             <p><strong>Privacy Tools:</strong> Discover software and services that enhance your online privacy.</p>
             <p><strong>Educational Platforms:</strong> Learn about cybersecurity through online courses and tutorials.</p>
@@ -55,14 +34,10 @@
             <p><strong>Security Software:</strong> Find reputable antivirus, firewall, and VPN solutions.</p>
             <p><strong>Research Publications:</strong> Explore academic and industry research on digital security.</p>
         </marquee>
-
-        <!-- The <details> element specifies additional details that the user can view or hide on demand -->
-        <!-- The <summary> element defines a visible heading for the <details> element -->
         <details>
             <summary>Password Managers</summary>
             <p>Password managers are essential tools for creating and managing strong, unique passwords for all your accounts. Here are some highly recommended options:</p>
             <ul>
-                <!-- The target="_blank" attribute opens the link in a new tab or window -->
                 <li><a href="https://www.lastpass.com/" target="_blank">LastPass</a> - A user-friendly password manager with both free and premium plans.</li>
                 <li><a href="https://1password.com/" target="_blank">1Password</a> - Known for its robust security features and excellent user interface.</li>
                 <li><a href="https://bitwarden.com/" target="_blank">Bitwarden</a> - An open-source password manager that prioritizes transparency and security.</li>
@@ -70,7 +45,6 @@
             </ul>
             <p>Using a password manager is crucial for maintaining strong, unique passwords across all your online accounts, significantly enhancing your overall digital security.</p>
         </details>
-
         <details>
             <summary>Virtual Private Networks (VPNs)</summary>
             <p>VPNs are vital tools for protecting your online privacy and security, especially when using public Wi-Fi networks. Here are some top-rated VPN services:</p>
@@ -82,7 +56,6 @@
             </ul>
             <p>When choosing a VPN, consider factors such as logging policies, server locations, speed, and compatibility with your devices. Always read the provider's privacy policy carefully.</p>
         </details>
-
         <details>
             <summary>Cybersecurity News and Information</summary>
             <p>Stay informed about the latest cybersecurity threats, trends, and best practices with these reputable sources:</p>
@@ -95,51 +68,33 @@
             </ul>
             <p>Regularly following these sources will help you stay ahead of emerging threats and understand the evolving cybersecurity landscape.</p>
         </details>
-
         <details>
             <summary>Privacy-Enhancing Tools</summary>
-            <p>Protect your personal information and browsing habits with these privacy-focused tools:</p>
+            <p>In addition to VPNs and password managers, consider these tools to further enhance your online privacy:</p>
             <ul>
-                <li><a href="https://www.torproject.org/" target="_blank">Tor Browser</a> - A browser designed for anonymous web browsing, routing your traffic through multiple servers.</li>
-                <li><a href="https://duckduckgo.com/" target="_blank">DuckDuckGo</a> - A search engine that doesn't track your searches or create user profiles.</li>
-                <li><a href="https://signal.org/" target="_blank">Signal</a> - An end-to-end encrypted messaging app for secure communications.</li>
-                <li><a href="https://protonmail.com/" target="_blank">ProtonMail</a> - An encrypted email service that prioritizes user privacy.</li>
+                <li><a href="https://www.torproject.org/" target="_blank">Tor Browser</a> - A browser focused on anonymity, which routes your traffic through multiple servers to mask your identity.</li>
+                <li><a href="https://signal.org/" target="_blank">Signal</a> - A secure messaging app with end-to-end encryption for texts, voice calls, and video calls.</li>
                 <li><a href="https://www.privacytools.io/" target="_blank">PrivacyTools</a> - A comprehensive resource for privacy-respecting software and services.</li>
-                <li><a href="https://www.ghostery.com/" target="_blank">Ghostery</a> - A browser extension that blocks trackers and enhances browsing privacy.</li>
+                <li><a href="https://www.ghostery.com/" target="_blank">Ghostery</a> - A browser extension that blocks trackers and provides insights into who is tracking your browsing.</li>
+                <li><a href="https://www.eff.org/https-everywhere" target="_blank">HTTPS Everywhere</a> - A browser extension that encrypts your communications with many major websites, making your browsing more secure.</li>
             </ul>
-            <p>While these tools significantly enhance your privacy, remember that digital security is an ongoing process. Combine these tools with good security practices for the best results.</p>
+            <p>Remember that no single tool can guarantee complete privacy. It's important to use a combination of tools and best practices to protect your digital life.</p>
         </details>
-
         <details>
             <summary>Educational Resources</summary>
-            <p>Expand your cybersecurity knowledge with these educational platforms and courses:</p>
+            <p>Expand your knowledge of cybersecurity with these educational resources:</p>
             <ul>
-                <li><a href="https://www.coursera.org/specializations/cyber-security" target="_blank">Coursera Cybersecurity Specialization</a> - A comprehensive series of courses covering various aspects of cybersecurity.</li>
-                <li><a href="https://www.futurelearn.com/courses/introduction-to-cyber-security" target="_blank">FutureLearn Introduction to Cyber Security</a> - A free introductory course suitable for beginners.</li>
-                <li><a href="https://www.cybrary.it/" target="_blank">Cybrary</a> - An online platform offering both free and paid cybersecurity courses for all skill levels.</li>
-                <li><a href="https://www.sans.org/security-awareness-training/" target="_blank">SANS Security Awareness</a> - Professional training programs for individuals and organizations.</li>
+                <li><a href="https://www.coursera.org/specializations/cyber-security" target="_blank">Coursera Cybersecurity Specialization</a> - A comprehensive online course covering various aspects of cybersecurity.</li>
+                <li><a href="https://www.cybrary.it/" target="_blank">Cybrary</a> - Offers free and paid cybersecurity courses for all skill levels.</li>
                 <li><a href="https://www.edx.org/learn/cybersecurity" target="_blank">edX Cybersecurity Courses</a> - A variety of cybersecurity courses from top universities and institutions.</li>
+                <li><a href="https://www.sans.org/security-awareness-training/" target="_blank">SANS Security Awareness</a> - Provides security awareness training for organizations and individuals.</li>
+                <li><a href="https://www.futurelearn.com/subjects/it-and-computer-science-courses/cyber-security" target="_blank">FutureLearn Cyber Security Courses</a> - Offers courses on various cybersecurity topics from leading universities and cultural institutions.</li>
             </ul>
-            <p>Continuous learning is essential in the rapidly evolving field of cybersecurity. These resources cater to various skill levels and can help you stay informed and improve your security practices.</p>
-        </details>
-
-        <details>
-            <summary>Government and Organizational Resources</summary>
-            <p>Official resources from government agencies and international organizations provide valuable guidance on cybersecurity:</p>
-            <ul>
-                <li><a href="https://www.cisa.gov/cybersecurity" target="_blank">CISA (Cybersecurity and Infrastructure Security Agency)</a> - Offers cybersecurity resources and guidelines for individuals and businesses.</li>
-                <li><a href="https://www.ncsc.gov.uk/section/information-for/individuals-families" target="_blank">UK National Cyber Security Centre</a> - Provides advice for individuals and families on staying secure online.</li>
-                <li><a href="https://www.enisa.europa.eu/" target="_blank">ENISA (European Union Agency for Cybersecurity)</a> - Offers cybersecurity advice and reports for EU citizens and organizations.</li>
-                <li><a href="https://www.interpol.int/en/Crimes/Cybercrime" target="_blank">INTERPOL Cybercrime</a> - Provides information on global cybercrime trends and prevention strategies.</li>
-            </ul>
-            <p>These official resources often provide the most up-to-date and authoritative information on cybersecurity threats and best practices.</p>
+            <p>Continuous learning is key in the ever-evolving field of cybersecurity. These resources can help you stay informed and develop new skills to protect yourself and others in the digital world.</p>
         </details>
     </main>
-
     <footer>
-        <!-- The <footer> element defines a footer for a document or section -->
-        <p>&copy; 2024 Digital Privacy & Security Guide. All rights reserved.</p>
+        <p>&copy; 2024 Digital Privacy & Security. All rights reserved.</p>
     </footer>
 </body>
 </html>
-

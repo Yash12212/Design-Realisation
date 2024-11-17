@@ -1,71 +1,213 @@
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+:root {
+    --primary-color: #007bff; /* General blue */
+    --secondary-color: #f8f9fa; /* Light gray */
+    --text-color: #333; /* Dark gray */
+    --link-color: #007bff; /* General blue */
+    --hover-color: #e9ecef; /* Light gray for hover */
+    --hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Shadow for hover */
+    --header-footer-text: #fff; /* White */
+    --focus-outline: 2px solid #ff9500; /* Orange */
+    --border-radius: 0.5rem; /* General border radius */
 }
 
-header, footer {
-    background-color: #000080;
-    color: #ffffff;
-    text-align: center;
-    padding: 1rem;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* Base font size */
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* General font family */
+    line-height: 1.6; /* General line height */
+    color: var(--text-color); /* Text color */
+    max-width: 1200px; /* Maximum width for content */
+    margin: auto; /* Center content */
+    padding: 1.25rem; /* General padding */
+    background: 
+    linear-gradient(
+        to bottom, 
+        rgba(255, 255, 255, 0.8), 
+        rgba(255, 255, 255, 0.3)
+    ), 
+    url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E") no-repeat fixed;
+}
+
+:focus {
+    outline: var(--focus-outline); /* Focus outline */
+    outline-offset: 0.125rem; /* Offset for focus outline */
+}
+
+:focus-visible {
+    outline: var(--focus-outline); /* Focus outline for visible focus */
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: 1rem; /* Margin for headings and paragraphs */
+    line-height: 1.5; /* Line height for text */
+}
+
+header, footer, nav {
+    background-color: var(--primary-color); /* Background for header, footer, nav */
+    color: var(--header-footer-text); /* Text color for header, footer, nav */
+    text-align: center; /* Center text */
+    padding: 2rem; /* Padding for header, footer, nav */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for header, footer, nav */
 }
 
 nav {
-    background-color: #e6e6e6;
-    padding: 0.5rem;
-    text-align: center;
+    background-color: var(--secondary-color); /* Background for nav */
+    padding: 1rem; /* Padding for nav */
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    list-style: none; /* No list style */
+    display: flex; /* Flexbox for nav items */
+    justify-content: center; /* Center nav items */
+    flex-wrap: wrap; /* Wrap nav items */
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 0 10px;
+    margin: 0 1rem; /* Margin for nav items */
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #000080;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    text-decoration: none; /* No underline for links */
+    color: var(--link-color); /* Link color */
+    font-weight: 500; /* Font weight for links */
+    font-size: 1.1rem; /* Font size for links */
+    padding: 0.3125rem 0.625rem; /* Padding for links */
+    border-radius: 1.25rem; /* Border radius for links */
+    transition: color 0.3s, transform 0.2s; /* Transition for links */
 }
 
 nav ul li a:hover {
-    color: #0000ff;
+    color: var(--primary-color); /* Color change on hover */
+    background-color: var(--hover-color); /* Background change on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
 }
 
 main {
-    background-color: #ffffff;
-    padding: 20px;
-    margin-top: 20px;
+    background-color: #fff; /* White background for main */
+    padding: 1.875rem; /* Padding for main */
+    margin-top: 1.875rem; /* Margin for main */
+    border-radius: var(--border-radius); /* Border radius for main */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for main */
+    transition: box-shadow 0.3s; /* Transition for shadow */
+}
+
+main:hover {
+    box-shadow: var(--hover-shadow); /* Shadow effect on hover */
 }
 
 details {
-    margin-bottom: 1rem;
-    transition: background-color 0.3s ease;
+    margin-bottom: 1.5rem; /* Margin for details */
+    border: 1px solid var(--secondary-color); /* Border for details */
+    border-radius: var(--border-radius); /* Border radius for details */
+    overflow: hidden; /* Hide overflow */
+    transition: all 0.3s; /* Transition for details */
 }
 
 details[open] {
-    background-color: #f9f9f9;
+    background-color: #fff; /* Background for open details */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for open details */
 }
 
 summary {
-    background-color: #f1f1f1;
-    color: #000080;
-    padding: 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: var(--secondary-color); /* Background for summary */
+    color: var(--link-color); /* Text color for summary */
+    padding: 0.75rem 1.25rem; /* Padding for summary */
+    font-weight: 500; /* Font weight for summary */
+    cursor: pointer; /* Pointer cursor for summary */
+    transition: all 0.3s; /* Transition for summary */
+    position: relative; /* Position for summary */
 }
 
 summary:hover {
-    background-color: #e6e6e6;
+    background-color: var(--hover-color); /* Background change on hover */
+    color: var(--primary-color); /* Text color change on hover */
+    transform: scale(1.03); /* Scale effect on hover */
+}
+
+summary::after {
+    content: '▼'; /* Arrow for summary */
+    position: absolute; /* Absolute positioning for arrow */
+    right: 1.25rem; /* Positioning from the right */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center adjustment */
+    transition: transform 0.3s; /* Transition for arrow */
+}
+
+details[open] summary::after {
+    transform: translateY(-50%) rotate(180deg); /* Rotate arrow when open */
+}
+
+details[open] summary {
+    border-bottom: 1px solid var(--secondary-color); /* Border for open summary */
+}
+
+details > *:not(summary) {
+    padding: 1.25rem; /* Padding for details content */
+}
+
+button, .button {
+    background-color: var(--primary-color); /* Background for buttons */
+    color: var(--header-footer-text); /* Text color for buttons */
+    border: none; /* No border for buttons */
+    padding: 0.625rem 1.25rem; /* Padding for buttons */
+    border-radius: var(--border-radius); /* Border radius for buttons */
+    cursor: pointer; /* Pointer cursor for buttons */
+    transition: background-color 0.3s, transform 0.2s; /* Transition for buttons */
+}
+
+button:hover, .button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+a {
+    color: var(--link-color); /* Link color */
+    text-decoration: none; /* No underline for links */
+    transition: color 0.3s; /* Transition for links */
+}
+
+a:hover {
+    color: var(--primary-color); /* Color change on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0.625rem; /* Reduced padding for smaller screens */
+    }
+
+    header, footer {
+        padding: 1.5rem; /* Reduced padding for header and footer */
+    }
+
+    nav ul li {
+        margin: 0.3125rem; /* Reduced margin for nav items */
+    }
+
+    main {
+        padding: 1.25rem; /* Reduced padding for main */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.875rem; /* Smaller font size for mobile */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+    }
+
+    nav ul li {
+        margin: 0.3125rem 0; /* Margin for stacked nav items */
+    }
 }

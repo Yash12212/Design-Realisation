@@ -1,41 +1,21 @@
 <!DOCTYPE html>
-<!-- This declaration tells the browser that this is an HTML5 document -->
-
 <html lang="en">
-<!-- The <html> tag is the root element of an HTML page -->
-<!-- The lang attribute specifies the language of the document -->
-
 <head>
-    <!-- The <head> element contains meta information about the HTML page -->
-    
     <meta charset="UTF-8">
-    <!-- This meta tag specifies the character encoding for the HTML document -->
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- This meta tag ensures proper rendering on mobile devices -->
-    
     <title>Best Practices | Digital Privacy & Security</title>
-    <!-- The <title> element specifies a title for the HTML page (shown in the browser's title bar or page's tab) -->
-    
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- The <body> element defines the document's body, which contains all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc. -->
-    
     <header>
-        <!-- The <header> element represents a container for introductory content or a set of navigational links -->
-        <marquee behavior="alternate" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
+        <marquee behavior="alternate" scrollamount="3">
             <h1>Best Practices</h1>
         </marquee>
     </header>
-    
-    <marquee direction="left" scrollamount="3" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();">
+    <marquee direction="left" scrollamount="3" behavior="scroll">
         <p>Discover strategies for safeguarding your digital life with our comprehensive guide to privacy and security best practices!</p>
     </marquee>
-    
     <nav>
-        <!-- The <nav> element defines a set of navigation links -->
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="threats.html">Threats</a></li>
@@ -43,12 +23,10 @@
             <li><a href="resources.html">Resources</a></li>
         </ul>
     </nav>
-    
     <main>
-        <!-- The <main> element specifies the main content of a document -->
         <h2>Best Practices for Digital Privacy and Security</h2>
         <p>In an era where digital threats are constantly evolving, implementing robust privacy and security practices is crucial. This guide outlines key strategies to protect your digital life, from basic hygiene to advanced techniques. Remember, cybersecurity is an ongoing process, not a one-time task. Regularly reviewing and updating your practices is essential for maintaining strong digital defenses.</p>
-        <marquee direction="up" scrollamount="2" height="150" onmouseover="this.stop();" onmouseout="this.start();">
+        <marquee direction="up" scrollamount="4.5" height="150">
             <p><strong>Use Strong Passwords:</strong> Create unique, complex passwords for each account.</p>
             <p><strong>Enable Two-Factor Authentication:</strong> Add an extra layer of security to your accounts.</p>
             <p><strong>Keep Software Updated:</strong> Regularly update your operating system and applications.</p>
@@ -56,9 +34,6 @@
             <p><strong>Encrypt Your Data:</strong> Use encryption tools to protect sensitive information.</p>
             <p><strong>Be Cautious with Email:</strong> Don't open suspicious attachments or click on unknown links.</p>
         </marquee>
-
-        <!-- The <details> element specifies additional details that the user can view or hide on demand -->
-        <!-- The <summary> element defines a visible heading for the <details> element -->
         <details>
             <summary>Use Strong, Unique Passwords</summary>
             <p>Strong, unique passwords are your first line of defense against unauthorized access to your accounts.</p>
@@ -73,7 +48,6 @@
             </ul>
             <p>Remember, never share your passwords with anyone, and avoid using the same password across multiple accounts.</p>
         </details>
-
         <details>
             <summary>Enable Multi-Factor Authentication (MFA)</summary>
             <p>Multi-Factor Authentication adds an extra layer of security by requiring additional verification beyond just a password.</p>
@@ -87,7 +61,6 @@
             </ul>
             <p>While any form of MFA is better than none, app-based or hardware token methods are generally more secure than SMS-based MFA.</p>
         </details>
-
         <details>
             <summary>Keep Software Updated</summary>
             <p>Regular software updates are crucial for patching security vulnerabilities and protecting against the latest threats.</p>
@@ -98,47 +71,12 @@
                 <li>Update all devices, including smartphones, tablets, and IoT devices</li>
                 <li>Be cautious of fake update notifications - always download updates from official sources</li>
                 <li>Consider using a patch management solution for multiple devices</li>
-                <li>Don't ignore update prompts - install updates as soon as they're available</li>
             </ul>
-            <p>Outdated software can have vulnerabilities that cybercriminals can exploit. Keeping your software up-to-date is one of the easiest and most effective ways to protect yourself.</p>
-        </details>
-
-        <details>
-            <summary>Secure Your Network</summary>
-            <p>A secure network is fundamental to protecting your digital life, especially when using public Wi-Fi.</p>
-            <h4>Tips for network security:</h4>
-            <ul>
-                <li>Use a VPN to encrypt your internet traffic, especially on public Wi-Fi</li>
-                <li>Secure your home Wi-Fi with a strong password and WPA3 encryption</li>
-                <li>Regularly update your router's firmware</li>
-                <li>Use a guest network for visitors and IoT devices</li>
-                <li>Disable WPS (Wi-Fi Protected Setup) on your router</li>
-                <li>Consider using a hardware firewall for additional protection</li>
-                <li>Be cautious when using public Wi-Fi - avoid accessing sensitive accounts if possible</li>
-            </ul>
-            <p>Remember, even if a public Wi-Fi network requires a password, it's still not secure unless you're using additional protection like a VPN.</p>
-        </details>
-
-        <details>
-            <summary>Use Encryption</summary>
-            <p>Encryption is a powerful tool for protecting your data from unauthorized access.</p>
-            <h4>Ways to implement encryption:</h4>
-            <ul>
-                <li>Use HTTPS websites whenever possible, especially for sensitive transactions</li>
-                <li>Encrypt your hard drive using built-in tools like FileVault (Mac) or BitLocker (Windows)</li>
-                <li>Use encrypted messaging apps for sensitive communications</li>
-                <li>Encrypt your email using PGP or S/MIME</li>
-                <li>Use encrypted cloud storage services or encrypt files before uploading to the cloud</li>
-                <li>Enable encryption on your mobile devices</li>
-            </ul>
-            <p>Encryption converts your data into a code that can only be deciphered with the correct key, making it much harder for unauthorized parties to access your information.</p>
+            <p>Keeping your software updated is one of the most effective ways to protect against known vulnerabilities and exploits.</p>
         </details>
     </main>
-
     <footer>
-        <!-- The <footer> element defines a footer for a document or section -->
-        <p>&copy; 2024 Digital Privacy & Security Guide. All rights reserved.</p>
+        <p>&copy; 2024 Digital Privacy & Security. All rights reserved.</p>
     </footer>
 </body>
 </html>
-

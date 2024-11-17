@@ -1,41 +1,21 @@
 <!DOCTYPE html>
-<!-- This declaration tells the browser that this is an HTML5 document -->
-
 <html lang="en">
-<!-- The <html> tag is the root element of an HTML page -->
-<!-- The lang attribute specifies the language of the document -->
-
 <head>
-    <!-- The <head> element contains meta information about the HTML page -->
-    
     <meta charset="UTF-8">
-    <!-- This meta tag specifies the character encoding for the HTML document -->
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- This meta tag ensures proper rendering on mobile devices -->
-    
     <title>Digital Threats | Digital Privacy & Security</title>
-    <!-- The <title> element specifies a title for the HTML page (shown in the browser's title bar or page's tab) -->
-    
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- The <body> element defines the document's body, which contains all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc. -->
-    
     <header>
-        <!-- The <header> element represents a container for introductory content or a set of navigational links -->
-        <marquee behavior="alternate" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
+        <marquee behavior="alternate" scrollamount="3">
             <h1>Digital Threats</h1>
         </marquee>
     </header>
-    
-    <marquee direction="left" scrollamount="3" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();">
-        <p>Stay informed about common digital threats and protect your personal information with our essential guide!</p>
+    <marquee direction="left" scrollamount="3" behavior="scroll">
+        <p>Stay informed about common digital threats and protect your personal information!</p>
     </marquee>
-    
     <nav>
-        <!-- The <nav> element defines a set of navigation links -->
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="threats.html">Threats</a></li>
@@ -43,135 +23,98 @@
             <li><a href="resources.html">Resources</a></li>
         </ul>
     </nav>
-    
     <main>
-        <!-- The <main> element specifies the main content of a document -->
         <h2>Common Digital Threats and Vulnerabilities</h2>
-        <p>In our increasingly connected world, digital threats are constantly evolving. Understanding these threats is crucial for protecting your personal information, financial assets, and overall digital well-being. This page outlines some of the most common and emerging digital threats you should be aware of, along with practical advice on how to protect yourself.</p>
-        <marquee direction="up" scrollamount="2" height="150" onmouseover="this.stop();" onmouseout="this.start();">
-            <p><strong>Phishing Attacks:</strong> Fraudulent attempts to obtain sensitive information by disguising as a trustworthy entity.</p>
-            <p><strong>Malware:</strong> Malicious software designed to disrupt, damage, or gain unauthorized access to a computer system.</p>
-            <p><strong>Ransomware:</strong> A type of malware that threatens to publish the victim's data or perpetually block access to it unless a ransom is paid.</p>
-            <p><strong>Data Breaches:</strong> Unauthorized access to sensitive, protected, or confidential data.</p>
-            <p><strong>Man-in-the-Middle (MitM) Attacks:</strong> Attacks where the attacker secretly relays and possibly alters the communications between two parties.</p>
-            <p><strong>Social Engineering:</strong> Psychological manipulation of people into performing actions or divulging confidential information.</p>
+        <p>In today's digital world, we face many threats that can put our security at risk. Knowing these dangers is important for staying safe online. By being aware and taking simple steps, we can better protect our personal information.</p>
+        <marquee direction="up" scrollamount="4.5" height="150">
+            <p><strong>Phishing:</strong> Fraudulent attempts to obtain sensitive information.</p>
+            <p><strong>Malware:</strong> Malicious software designed to disrupt or damage systems.</p>
+            <p><strong>Ransomware:</strong> Malware that blocks access to data unless a ransom is paid.</p>
+            <p><strong>Data Breaches:</strong> Unauthorized access to sensitive data.</p>
+            <p><strong>Man-in-the-Middle (MitM) Attacks:</strong> Intercepting and altering communications between parties.</p>
+            <p><strong>Social Engineering:</strong> Manipulating people into divulging confidential information.</p>
         </marquee>
-
-        <!-- The <details> element specifies additional details that the user can view or hide on demand -->
-        <!-- The <summary> element defines a visible heading for the <details> element -->
         <details>
             <summary>Phishing Attacks</summary>
-            <p>Phishing is a type of social engineering attack often used to steal user data, including login credentials and credit card numbers. It occurs when an attacker, masquerading as a trusted entity, dupes a victim into opening an email, instant message, or text message.</p>
-            <h4>Types of Phishing:</h4>
+            <p>Phishing is a social engineering attack where attackers masquerade as trusted entities to steal user data.</p>
+            <h4>Types:</h4>
             <ul>
-                <li><strong>Email Phishing:</strong> The most common type, where attackers send fraudulent emails impersonating legitimate organizations.</li>
+                <li><strong>Email Phishing:</strong> Fraudulent emails impersonating legitimate organizations.</li>
                 <li><strong>Spear Phishing:</strong> Targeted attacks against specific individuals or companies.</li>
-                <li><strong>Whaling:</strong> Phishing attacks targeting senior executives and other high-profile individuals.</li>
-                <li><strong>Smishing:</strong> Phishing conducted via SMS text messages.</li>
-                <li><strong>Vishing:</strong> Voice phishing, where attackers use phone calls to deceive victims.</li>
+                <li><strong>Whaling:</strong> Attacks targeting high-profile individuals.</li>
+                <li><strong>Smishing:</strong> Phishing via SMS.</li>
+                <li><strong>Vishing:</strong> Voice phishing via phone calls.</li>
             </ul>
-            <p><strong>How to protect yourself:</strong></p>
-            <ul>
-                <li>Always verify the sender's identity before clicking on links or downloading attachments.</li>
-                <li>Use email filters to detect phishing attempts.</li>
-                <li>Be cautious of urgent or threatening language in emails.</li>
-                <li>Check the URL of websites carefully before entering sensitive information.</li>
-                <li>Enable two-factor authentication on all your important accounts.</li>
-            </ul>
+            <p><strong>Protection:</strong> Verify sender identity, use email filters, be cautious of urgent language, check URLs, enable two-factor authentication.</p>
         </details>
-
         <details>
             <summary>Malware</summary>
-            <p>Malware is intrusive software designed to damage and destroy computers and computer systems. It can lead to data theft, financial loss, and system crashes.</p>
-            <h4>Common types of malware:</h4>
+            <p>Malware is intrusive software designed to damage systems, leading to data theft and financial loss.</p>
+            <h4>Types:</h4>
             <ul>
-                <li><strong>Viruses:</strong> Malicious programs that can replicate themselves and spread to other computers.</li>
-                <li><strong>Worms:</strong> Similar to viruses, but can spread without human action.</li>
-                <li><strong>Trojan Horses:</strong> Malware disguised as legitimate software.</li>
-                <li><strong>Ransomware:</strong> Malware that encrypts your files and demands payment for decryption.</li>
-                <li><strong>Spyware:</strong> Software that secretly monitors and collects information about you.</li>
-                <li><strong>Adware:</strong> Software that automatically displays or downloads advertising material.</li>
+                <li><strong>Viruses:</strong> Self-replicating malicious programs.</li>
+                <li><strong>Worms:</strong> Spread without human action.</li>
+                <li><strong>Trojan Horses:</strong> Disguised as legitimate software.</li>
+                <li><strong>Ransomware:</strong> Encrypts files and demands payment.</li>
+                <li><strong>Spyware:</strong> Secretly monitors user activity.</li>
+                <li><strong>Adware:</strong> Automatically displays advertising material.</li>
             </ul>
-            <p><strong>How to protect yourself:</strong></p>
-            <ul>
-                <li>Keep your operating system and all software up-to-date.</li>
-                <li>Use reputable antivirus and anti-malware software and keep it updated.</li>
-                <li>Be cautious about what you download and install, especially from unknown sources.</li>
-                <li>Use a firewall to monitor incoming and outgoing traffic.</li>
-                <li>Regularly back up your data to an external drive or cloud storage.</li>
-            </ul>
+            <p><strong>Protection:</strong> Keep software updated, use antivirus software, be cautious with downloads, use firewalls, regularly backup data.</p>
         </details>
-
+        <details>
+            <summary>Ransomware</summary>
+            <p>Ransomware blocks access to a system until a ransom is paid, typically by encrypting files.</p>
+            <h4>Process:</h4>
+            <ol>
+                <li>Infection via phishing or vulnerabilities.</li>
+                <li>File encryption.</li>
+                <li>Ransom demand, often in cryptocurrency.</li>
+                <li>Countdown timer for payment.</li>
+            </ol>
+            <p><strong>Protection:</strong> Regular backups, keep software updated, use antivirus with ransomware protection, be cautious with emails, educate about risks.</p>
+        </details>
         <details>
             <summary>Data Breaches</summary>
-            <p>A data breach is a security incident in which information is accessed without authorization. Data breaches can harm both businesses and consumers, potentially exposing personal information, financial data, and more.</p>
-            <h4>Common causes of data breaches:</h4>
+            <p>Data breaches involve unauthorized access to sensitive or confidential data.</p>
+            <h4>Common causes:</h4>
             <ul>
-                <li>Weak and stolen credentials</li>
+                <li>Weak credentials</li>
                 <li>Application vulnerabilities</li>
                 <li>Malware</li>
                 <li>Social engineering</li>
-                <li>Too many permissions</li>
                 <li>Insider threats</li>
-                <li>Physical attacks</li>
-                <li>Improper configuration and user error</li>
+                <li>Physical theft</li>
             </ul>
-            <p><strong>How to protect yourself:</strong></p>
-            <ul>
-                <li>Use strong, unique passwords for each account.</li>
-                <li>Enable two-factor authentication whenever possible.</li>
-                <li>Regularly monitor your accounts for suspicious activity.</li>
-                <li>Be cautious about sharing sensitive information online.</li>
-                <li>Use a password manager to securely store and generate complex passwords.</li>
-                <li>Regularly check if your email has been involved in known data breaches using services like Have I Been Pwned.</li>
-            </ul>
+            <p><strong>Protection:</strong> Use strong passwords, enable two-factor authentication, monitor accounts, limit shared information, encrypt sensitive data, stay informed about breaches.</p>
         </details>
-
         <details>
             <summary>Man-in-the-Middle (MitM) Attacks</summary>
-            <p>A Man-in-the-Middle attack occurs when an attacker secretly relays and possibly alters the communications between two parties who believe they are directly communicating with each other.</p>
-            <h4>Common types of MitM attacks:</h4>
+            <p>MitM attacks involve intercepting and potentially altering communications between two parties.</p>
+            <h4>Types:</h4>
             <ul>
-                <li><strong>Wi-Fi Eavesdropping:</strong> Intercepting data on unsecured Wi-Fi networks.</li>
-                <li><strong>IP Spoofing:</strong> Disguising a malicious source as a trusted IP address.</li>
-                <li><strong>SSL Stripping:</strong> Downgrading HTTPS connections to unsecured HTTP.</li>
-                <li><strong>DNS Spoofing:</strong> Redirecting traffic to fake websites by manipulating DNS queries.</li>
+                <li><strong>Wi-Fi Eavesdropping:</strong> Intercepting data on unsecured networks.</li>
+                <li><strong>IP Spoofing:</strong> Disguising as a trusted computer.</li>
+                <li><strong>SSL Hijacking:</strong> Exploiting SSL/TLS vulnerabilities.</li>
+                <li><strong>DNS Spoofing:</strong> Redirecting traffic to fake websites.</li>
             </ul>
-            <p><strong>How to protect yourself:</strong></p>
-            <ul>
-                <li>Avoid using public Wi-Fi networks for sensitive transactions.</li>
-                <li>Use a VPN to encrypt your internet traffic.</li>
-                <li>Ensure websites use HTTPS before entering sensitive information.</li>
-                <li>Be cautious of security warnings in your browser.</li>
-                <li>Keep your browser and operating system updated.</li>
-            </ul>
+            <p><strong>Protection:</strong> Use VPNs on public Wi-Fi, check for HTTPS, use strong Wi-Fi encryption, keep software updated, be cautious of certificate warnings.</p>
         </details>
-
         <details>
             <summary>Social Engineering</summary>
-            <p>Social engineering is the psychological manipulation of people into performing actions or divulging confidential information. It relies on human error rather than vulnerabilities in software and operating systems.</p>
-            <h4>Common social engineering techniques:</h4>
+            <p>Social engineering manipulates people into revealing confidential information or performing actions.</p>
+            <h4>Techniques:</h4>
             <ul>
-                <li><strong>Baiting:</strong> Offering something enticing to an end user in exchange for private data.</li>
-                <li><strong>Scareware:</strong> Bombarding the victim with false alarms and fictitious threats.</li>
-                <li><strong>Pretexting:</strong> Creating a fabricated scenario to obtain private information.</li>
-                <li><strong>Quid Pro Quo:</strong> Requesting private information in exchange for a service.</li>
+                <li><strong>Phishing:</strong> Fraudulent emails or messages.</li>
+                <li><strong>Pretexting:</strong> Creating false scenarios.</li>
+                <li><strong>Baiting:</strong> Offering something enticing for private data.</li>
+                <li><strong>Quid Pro Quo:</strong> Requesting data in exchange for a service.</li>
+                <li><strong>Tailgating:</strong> Following authorized personnel into restricted areas.</li>
             </ul>
-            <p><strong>How to protect yourself:</strong></p>
-            <ul>
-                <li>Be skeptical of unsolicited contact from individuals or companies.</li>
-                <li>Verify the identity of anyone requesting sensitive information.</li>
-                <li>Don't click on links or download attachments from unknown sources.</li>
-                <li>Use multi-factor authentication on all your accounts.</li>
-                <li>Educate yourself and others about common social engineering tactics.</li>
-            </ul>
+            <p><strong>Protection:</strong> Be skeptical of unsolicited contact, verify identities, avoid unknown links/attachments, use multi-factor authentication, educate about tactics, implement strict security policies.</p>
         </details>
     </main>
-
     <footer>
-        <!-- The <footer> element defines a footer for a document or section -->
-        <p>&copy; 2024 Digital Privacy & Security Guide. All rights reserved.</p>
+        <p>&copy; 2024 Digital Privacy & Security. All rights reserved.</p>
     </footer>
 </body>
 </html>
-
