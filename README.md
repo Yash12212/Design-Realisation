@@ -71,7 +71,7 @@ Our Digital Privacy & Security Guide offers:
 
 For those who want to dive right in:
 
-1. Visit [https://yash12212.github.io/Design-Realisation/](https://yash12212.github.io/Design-Realisation/)
+1. Visit [https://yash12212.github.io/Web-Design-Project/](https://yash12212.github.io/Web-Design-Project/)
 2. Navigate through the guide using the menu
 3. Start learning about digital privacy and security!
 
@@ -84,16 +84,16 @@ For those who want to dive right in:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Yash12212/Design-Realisation.git
+   git clone https://github.com/Yash12212/Web-Design-Project.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd Design-Realisation
+   cd Web-Design-Project
    ```
 
 ### Usage
 
-- 🌍 **Online Access:** Visit [https://yash12212.github.io/Design-Realisation/](https://yash12212.github.io/Design-Realisation/)
+- 🌍 **Online Access:** Visit [https://yash12212.github.io/Web-Design-Project/](https://yash12212.github.io/Web-Design-Project/)
 - 💻 **Local Access:** 
   1. Open `index.html` in your web browser
   2. Navigate through different sections using the provided menu
@@ -148,7 +148,7 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 Your feedback is valuable to us! If you have any questions, suggestions, or encounter any issues while using this guide, please:
 
-- Open an [issue](https://github.com/Yash12212/Design-Realisation/issues) on GitHub
+- Open an [issue](https://github.com/Yash12212/Web-Design-Project/issues) on GitHub
 - Contact us via email at yash12212@gmail.com
 
 Join us in our mission to create a safer digital world for everyone! 🌐🔒
