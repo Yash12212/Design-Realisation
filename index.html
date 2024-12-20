@@ -3,84 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn essential digital privacy and security practices to protect yourself online">
     <title>Digital Privacy & Security</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <header>
-        <marquee behavior="alternate" scrollamount="3">
-            <h1>Digital Privacy & Security</h1>
-        </marquee>
-    </header>
-    <marquee direction="left" scrollamount="3" behavior="scroll">
-        <p>Empower yourself with essential knowledge to protect your digital privacy and security in our interconnected world!</p>
-    </marquee>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="threats.html">Threats</a></li>
-            <li><a href="best-practices.html">Best Practices</a></li>
-            <li><a href="resources.html">Resources</a></li>
-        </ul>
-    </nav>
-    <main>
-        <h2>Welcome to Digital Privacy & Security</h2>
-        <p>In today's interconnected world, protecting your digital privacy and ensuring your online security is more important than ever. As technology advances, so do the threats to our digital lives. This website aims to empower you with essential knowledge and practical tools to safeguard your online presence and personal information.</p>
-        <marquee direction="up" scrollamount="4.5" height="150">
-            <p><strong>Digital Privacy:</strong> Protecting personal information in the digital realm.</p>
-            <p><strong>Cybersecurity:</strong> Safeguarding systems, networks, and programs from digital attacks.</p>
-            <p><strong>Data Protection:</strong> Securing sensitive information from unauthorized access and data breaches.</p>
-            <p><strong>Online Safety:</strong> Practicing safe browsing and communication habits on the internet.</p>
-            <p><strong>Identity Protection:</strong> Safeguarding personal identity information from theft and misuse.</p>
-            <p><strong>Digital Footprint:</strong> Managing the trail of data you create while using the Internet.</p>
-        </marquee>
-        <details>
-            <summary>Why Digital Privacy Matters</summary>
-            <p>Digital privacy is crucial in our increasingly connected world:</p>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <div class="page-wrapper">
+        <header class="site-header">
+            <div class="header-content">
+                <h1>Digital Privacy & Security</h1>
+                <p class="tagline">Empower yourself with essential knowledge to protect your digital privacy and security in our interconnected world!</p>
+            </div>
+            <div class="header-background"></div>
+        </header>
+
+        <nav class="main-nav" aria-label="Main navigation">
             <ul>
-                <li>It protects your personal information from unauthorized access, misuse, and data breaches.</li>
-                <li>It preserves your autonomy and freedom of expression online, allowing you to browse and communicate without fear of judgment or repercussion.</li>
-                <li>It safeguards you against identity theft, financial fraud, and other forms of cybercrime.</li>
-                <li>It prevents unwanted surveillance and profiling by corporations, governments, and malicious actors.</li>
-                <li>It gives you control over your digital footprint and how your information is shared and used online.</li>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="threats.html">Threats</a></li>
+                <li><a href="best-practices.html">Best Practices</a></li>
+                <li><a href="resources.html">Resources</a></li>
             </ul>
-        </details>
-        <details>
-            <summary>The Importance of Cybersecurity</summary>
-            <p>Cybersecurity is essential for several reasons:</p>
-            <ul>
-                <li>It protects your devices from malware, ransomware, and other cyber attacks that can compromise your data and privacy.</li>
-                <li>It secures your sensitive data, including financial information, personal communications, and confidential documents.</li>
-                <li>It helps maintain the integrity and availability of your digital assets, ensuring you can access your information when needed.</li>
-                <li>It contributes to a safer overall internet ecosystem, making the web more secure for everyone.</li>
-                <li>It safeguards critical infrastructure and services that rely on digital systems, from healthcare to energy grids.</li>
-            </ul>
-        </details>
-        <details>
-            <summary>The Evolving Landscape of Cybersecurity</summary>
-            <p>The field of cybersecurity is constantly changing:</p>
-            <ul>
-                <li>New threats emerge regularly, requiring continuous adaptation of security measures.</li>
-                <li>Artificial Intelligence and Machine Learning are being used both for attack and defense in cybersecurity.</li>
-                <li>The rise of IoT (Internet of Things) devices has expanded the attack surface for cybercriminals.</li>
-                <li>Privacy regulations like GDPR and CCPA are shaping how organizations handle personal data.</li>
-                <li>Remote work trends have created new challenges for securing corporate networks and data.</li>
-            </ul>
-        </details>
-        <details>
-            <summary>How This Website Can Help</summary>
-            <p>Our website is designed to be your go-to resource for digital privacy and security:</p>
-            <ul>
-                <li>We provide up-to-date information on the latest digital threats and how to protect against them.</li>
-                <li>Our best practices section offers practical tips and strategies for enhancing your online security.</li>
-                <li>We curate a list of trusted resources and tools to help you take control of your digital privacy.</li>
-                <li>Our content is regularly updated to reflect the evolving landscape of cybersecurity.</li>
-                <li>We break down complex topics into easy-to-understand guides, making cybersecurity accessible to everyone.</li>
-            </ul>
-        </details>
-    </main>
-    <footer>
-        <p>&copy; 2024 Digital Privacy & Security. All rights reserved.</p>
-    </footer>
+        </nav>
+
+        <main id="main-content">
+            <section class="hero-section">
+                <h2>Welcome to Digital Privacy & Security</h2>
+                <p>In today's interconnected world, protecting your digital privacy and ensuring your online security is more important than ever. As technology advances, so do the threats to our digital lives. This website aims to empower you with essential knowledge and practical tools to safeguard your online presence and personal information.</p>
+            </section>
+
+            <section class="key-concepts">
+                <div class="grid">
+                    <article class="concept-card">
+                        <div class="icon">🔒</div>
+                        <h3>Digital Privacy</h3>
+                        <p>Protecting personal information in the digital realm.</p>
+                    </article>
+                    <article class="concept-card">
+                        <div class="icon">🛡️</div>
+                        <h3>Cybersecurity</h3>
+                        <p>Safeguarding systems, networks, and programs from digital attacks.</p>
+                    </article>
+                    <article class="concept-card">
+                        <div class="icon">📊</div>
+                        <h3>Data Protection</h3>
+                        <p>Securing sensitive information from unauthorized access and data breaches.</p>
+                    </article>
+                    <article class="concept-card">
+                        <div class="icon">🌐</div>
+                        <h3>Online Safety</h3>
+                        <p>Practicing safe browsing and communication habits on the internet.</p>
+                    </article>
+                    <article class="concept-card">
+                        <div class="icon">👤</div>
+                        <h3>Identity Protection</h3>
+                        <p>Safeguarding personal identity information from theft and misuse.</p>
+                    </article>
+                    <article class="concept-card">
+                        <div class="icon">👣</div>
+                        <h3>Digital Footprint</h3>
+                        <p>Managing the trail of data you create while using the Internet.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="content-sections">
+                <details>
+                    <summary>Why Digital Privacy Matters</summary>
+                    <div class="details-content">
+                        <p>Think of digital privacy like the curtains in your home - you wouldn't want strangers peeping through your windows, right? The same applies to your online life. Here's why it matters:</p>
+                        <ul class="feature-list">
+                            <li><strong>Protect Your Personal Life:</strong> Just like you lock your house doors, protecting your online information keeps strangers from accessing your private details.</li>
+                            <li><strong>Prevent Identity Theft:</strong> Criminals can steal your identity using bits of personal information to open credit cards or take loans in your name.</li>
+                            <li><strong>Save Your Money:</strong> When hackers get your bank details, they can steal your hard-earned money. Good privacy practices are like having a strong safe.</li>
+                            <li><strong>Keep Your Family Safe:</strong> Protecting your family's privacy online is just as important as teaching them about real-world safety.</li>
+                            <li><strong>Avoid Scams:</strong> When your personal information is protected, scammers have a harder time trying to trick you.</li>
+                        </ul>
+                        <div class="real-world-example">
+                            <h4>Real-World Example</h4>
+                            <p>Imagine posting vacation photos while you're away. Without proper privacy settings, this could tell burglars your house is empty. It's like putting up a sign saying "Nobody's home!"</p>
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>The Importance of Cybersecurity</summary>
+                    <div class="details-content">
+                        <p>Think of cybersecurity as the digital version of home security. Just like you need locks, alarms, and awareness to keep your home safe, you need protection for your digital life too.</p>
+                        <ul class="feature-list">
+                            <li><strong>Protect Your Devices:</strong> Your phone, computer, and tablet are like digital houses - they need protection from viruses and hackers.</li>
+                            <li><strong>Keep Your Accounts Safe:</strong> Your email, social media, and banking accounts each need their own strong lock (password).</li>
+                            <li><strong>Guard Personal Information:</strong> Protect your passwords, bank details, and private messages like valuable items in your home.</li>
+                            <li><strong>Stay Safe Shopping Online:</strong> Verify online stores just like you'd verify physical stores before using your credit card.</li>
+                        </ul>
+                        <div class="real-world-example">
+                            <h4>Real-World Example</h4>
+                            <p>Using public WiFi is like using a public restroom - you wouldn't leave your wallet unattended! Similarly, avoid checking sensitive accounts on unsecured networks.</p>
+                        </div>
+                    </div>
+                </details>
+            </section>
+        </main>
+
+        <button class="fab" aria-label="Back to top" title="Back to top">↑</button>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Digital Privacy & Security. All rights reserved.</p>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <ul>
+                        <li><a href="#privacy-policy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Use</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+
+    <div class="scroll-progress"></div>
+
+    <script>
+        // Back to top button
+        const fab = document.querySelector('.fab');
+        window.addEventListener('scroll', () => {
+            fab.style.display = window.scrollY > 300 ? 'flex' : 'none';
+        });
+        fab.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Scroll progress indicator
+        const scrollProgress = document.querySelector('.scroll-progress');
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            scrollProgress.style.transform = `scaleX(${scrolled / 100})`;
+        });
+
+        // Enhanced details animation
+        document.querySelectorAll('details').forEach(detail => {
+            detail.addEventListener('click', e => {
+                if (detail.open) {
+                    document.querySelectorAll('details').forEach(d => {
+                        if (d !== detail) d.open = false;
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

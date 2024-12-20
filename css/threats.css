@@ -1,0 +1,184 @@
+.threats-overview {
+    background: var(--surface-light);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-md);
+}
+
+.threats-overview h3 {
+    color: var(--primary);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.threats-overview ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.threats-overview li {
+    padding: 1.5rem;
+    background: var(--surface-white);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.threats-overview li:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.threats-overview strong {
+    color: var(--text-dark);
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+
+/* Details sections */
+details {
+    margin: 2rem 0;
+    background: var(--surface-light);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border);
+}
+
+details > summary {
+    padding: 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 1.25rem;
+    list-style: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+details > summary::after {
+    content: '▼';
+    font-size: 0.8em;
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+details[open] > summary::after {
+    transform: rotate(180deg);
+}
+
+details > summary:hover {
+    color: var(--primary-dark);
+    background: var(--surface-hover);
+}
+
+details[open] {
+    box-shadow: var(--shadow-md);
+}
+
+details[open] > summary {
+    border-bottom: 1px solid var(--border);
+}
+
+details > div {
+    padding: 2rem;
+}
+
+details p {
+    color: var(--text);
+    line-height: 1.6;
+    margin: 1rem 0;
+    font-size: 1.05rem;
+}
+
+/* Warning Signs section */
+details h3 {
+    color: var(--text-dark);
+    margin: 1.5rem 0 1rem;
+    font-size: 1.3rem;
+}
+
+details ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+details ul li {
+    margin: 1rem 0;
+    padding: 1rem 1.5rem;
+    background: var(--surface-white);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+details ul li:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Example boxes */
+.real-world-example {
+    background: var(--surface-alt);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent);
+}
+
+.real-world-example h4 {
+    color: var(--accent);
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.15rem;
+}
+
+/* Warning box */
+.warning-box {
+    background: var(--warning-bg);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    border-left: 4px solid var(--warning);
+}
+
+.warning-box h4 {
+    color: var(--warning);
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.15rem;
+}
+
+/* Responsive grid for larger screens */
+@media (min-width: 768px) {
+    .threats-overview ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .threats-overview ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

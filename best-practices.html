@@ -3,80 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn essential best practices for protecting your digital privacy and security">
     <title>Best Practices | Digital Privacy & Security</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/best-practices.css">
 </head>
 <body>
-    <header>
-        <marquee behavior="alternate" scrollamount="3">
-            <h1>Best Practices</h1>
-        </marquee>
-    </header>
-    <marquee direction="left" scrollamount="3" behavior="scroll">
-        <p>Discover strategies for safeguarding your digital life with our comprehensive guide to privacy and security best practices!</p>
-    </marquee>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="threats.html">Threats</a></li>
-            <li><a href="best-practices.html">Best Practices</a></li>
-            <li><a href="resources.html">Resources</a></li>
-        </ul>
-    </nav>
-    <main>
-        <h2>Best Practices for Digital Privacy and Security</h2>
-        <p>In an era where digital threats are constantly evolving, implementing robust privacy and security practices is crucial. This guide outlines key strategies to protect your digital life, from basic hygiene to advanced techniques. Remember, cybersecurity is an ongoing process, not a one-time task. Regularly reviewing and updating your practices is essential for maintaining strong digital defenses.</p>
-        <marquee direction="up" scrollamount="4.5" height="150">
-            <p><strong>Use Strong Passwords:</strong> Create unique, complex passwords for each account.</p>
-            <p><strong>Enable Two-Factor Authentication:</strong> Add an extra layer of security to your accounts.</p>
-            <p><strong>Keep Software Updated:</strong> Regularly update your operating system and applications.</p>
-            <p><strong>Use a VPN:</strong> Protect your online activity, especially on public Wi-Fi.</p>
-            <p><strong>Encrypt Your Data:</strong> Use encryption tools to protect sensitive information.</p>
-            <p><strong>Be Cautious with Email:</strong> Don't open suspicious attachments or click on unknown links.</p>
-        </marquee>
-        <details>
-            <summary>Use Strong, Unique Passwords</summary>
-            <p>Strong, unique passwords are your first line of defense against unauthorized access to your accounts.</p>
-            <h4>Tips for creating and managing strong passwords:</h4>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <div class="page-wrapper">
+        <header class="site-header">
+            <div class="header-content">
+                <h1>Best Practices</h1>
+                <p class="tagline">Discover strategies for safeguarding your digital life with our comprehensive guide to privacy and security best practices!</p>
+            </div>
+            <div class="header-background"></div>
+        </header>
+
+        <nav class="main-nav" aria-label="Main navigation">
             <ul>
-                <li>Use at least 16 characters, including a mix of uppercase and lowercase letters, numbers, and symbols</li>
-                <li>Avoid using personal information or common words</li>
-                <li>Use a different password for each account</li>
-                <li>Consider using passphrases - long sequences of random words</li>
-                <li>Use a reputable password manager to generate and store complex passwords securely</li>
-                <li>Regularly update your passwords, especially after a known data breach</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="threats.html">Threats</a></li>
+                <li><a href="best-practices.html" class="active" aria-current="page">Best Practices</a></li>
+                <li><a href="resources.html">Resources</a></li>
             </ul>
-            <p>Remember, never share your passwords with anyone, and avoid using the same password across multiple accounts.</p>
-        </details>
-        <details>
-            <summary>Enable Multi-Factor Authentication (MFA)</summary>
-            <p>Multi-Factor Authentication adds an extra layer of security by requiring additional verification beyond just a password.</p>
-            <h4>Best practices for MFA:</h4>
-            <ul>
-                <li>Enable MFA on all accounts that offer it, especially email, financial, and social media accounts</li>
-                <li>Use app-based authenticators (like Google Authenticator or Authy) instead of SMS-based authentication when possible</li>
-                <li>Consider using hardware security keys for the highest level of protection</li>
-                <li>Be cautious of phishing attempts that try to steal your MFA codes</li>
-                <li>Set up backup methods for account recovery in case you lose access to your primary MFA device</li>
-            </ul>
-            <p>While any form of MFA is better than none, app-based or hardware token methods are generally more secure than SMS-based MFA.</p>
-        </details>
-        <details>
-            <summary>Keep Software Updated</summary>
-            <p>Regular software updates are crucial for patching security vulnerabilities and protecting against the latest threats.</p>
-            <h4>Best practices for software updates:</h4>
-            <ul>
-                <li>Enable automatic updates for your operating system and all applications</li>
-                <li>Regularly check for updates manually if automatic updates are not available</li>
-                <li>Update all devices, including smartphones, tablets, and IoT devices</li>
-                <li>Be cautious of fake update notifications - always download updates from official sources</li>
-                <li>Consider using a patch management solution for multiple devices</li>
-            </ul>
-            <p>Keeping your software updated is one of the most effective ways to protect against known vulnerabilities and exploits.</p>
-        </details>
-    </main>
-    <footer>
-        <p>&copy; 2024 Digital Privacy & Security. All rights reserved.</p>
-    </footer>
+        </nav>
+
+        <main id="main-content" class="content-sections">
+            <section class="hero-section">
+                <h2>Best Practices for Digital Privacy and Security</h2>
+                <p>In an era where digital threats are constantly evolving, implementing robust privacy and security practices is crucial. This guide outlines key strategies to protect your digital life, from basic hygiene to advanced techniques. Remember, cybersecurity is an ongoing process, not a one-time task. Regularly reviewing and updating your practices is essential for maintaining strong digital defenses.</p>
+            </section>
+
+            <details>
+                <summary>Creating Strong Passwords Made Easy</summary>
+                <div class="details-content">
+                    <p>Think of passwords like keys to your digital home - the stronger they are, the safer you are!</p>
+                    <h4>Simple Ways to Create Strong Passwords:</h4>
+                    <ul>
+                        <li>✨ Use a Phrase You'll Remember:
+                            <ul>
+                                <li>❌ Bad: password123</li>
+                                <li>✅ Good: ILovePizza&Pasta2024!</li>
+                                <li>💡 Tip: Use a memorable phrase and add numbers and symbols</li>
+                            </ul>
+                        </li>
+                        <li>🔄 Make Each Password Different:
+                            <ul>
+                                <li>❌ Bad: Using the same password everywhere</li>
+                                <li>✅ Good: Different passwords for each account</li>
+                                <li>💡 Tip: Add the website name to your base password (ILovePizza&PastaFB! for Facebook)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="real-world-example">
+                        <h4>🌟 Real-Life Example</h4>
+                        <p>Jane used the same password everywhere. When one shopping site was hacked, criminals tried her password on her email and bank accounts too! Now she uses different passwords and keeps track of them with a password manager app.</p>
+                    </div>
+                    <h4>Password Do's and Don'ts:</h4>
+                    <ul class="feature-list">
+                        <li>✅ DO use long passwords (at least 12 characters)</li>
+                        <li>✅ DO mix letters, numbers, and symbols</li>
+                        <li>✅ DO use a password manager app to remember them all</li>
+                        <li>❌ DON'T use your birthday or name</li>
+                        <li>❌ DON'T share passwords with anyone</li>
+                        <li>❌ DON'T write passwords on sticky notes</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details>
+                <summary>Two-Step Login (Like Having a Double Lock)</summary>
+                <div class="details-content">
+                    <p>Two-step login (or two-factor authentication) is like having a second lock on your door. Even if someone gets your password, they still can't get in!</p>
+                    <h4>How It Works:</h4>
+                    <ol>
+                        <li>👆 First, you enter your password</li>
+                        <li>📱 Then, you get a code on your phone</li>
+                        <li>🔐 Enter the code to finish logging in</li>
+                    </ol>
+                    <div class="real-world-example">
+                        <h4>🌟 Real-Life Example</h4>
+                        <p>Mike's friend guessed his Facebook password, but couldn't log in because Mike had two-step login turned on. The friend didn't have Mike's phone to get the special code!</p>
+                    </div>
+                    <h4>Where to Use Two-Step Login:</h4>
+                    <ul class="feature-list">
+                        <li>💰 Banking apps</li>
+                        <li>📧 Email accounts</li>
+                        <li>👥 Social media</li>
+                        <li>🛒 Shopping sites</li>
+                        <li>💭 Any account you want to keep extra safe</li>
+                    </ul>
+                    <h4>Easy Setup Guide:</h4>
+                    <ol>
+                        <li>Look for "Security" or "Privacy" in account settings</li>
+                        <li>Find "Two-Step Verification" or "Two-Factor Authentication"</li>
+                        <li>Turn it on and follow the simple setup steps</li>
+                        <li>Keep the backup codes somewhere safe (like a printed paper in your drawer)</li>
+                    </ol>
+                </div>
+            </details>
+
+            <details>
+                <summary>Keeping Your Devices Safe & Updated</summary>
+                <div class="details-content">
+                    <p>Think of updates like medicine for your devices - they fix problems and keep everything healthy!</p>
+                    <h4>Why Updates Matter:</h4>
+                    <ul>
+                        <li>🛡️ Fix security holes that bad guys might use</li>
+                        <li>🏃‍♂️ Make your device run faster</li>
+                        <li>🔧 Fix bugs and problems</li>
+                        <li>✨ Get new features</li>
+                    </ul>
+                    <div class="real-world-example">
+                        <h4>🌟 Real-Life Example</h4>
+                        <p>Susan kept clicking "remind me later" on her phone updates. One day, she couldn't use her banking app because it required the latest update for security. Now she lets updates happen automatically overnight!</p>
+                    </div>
+                    <h4>Make Updates Easy:</h4>
+                    <ul class="feature-list">
+                        <li>✅ Turn on automatic updates when possible</li>
+                        <li>✅ Update before going to bed</li>
+                        <li>✅ Use trusted WiFi for updates</li>
+                        <li>❌ Don't ignore update messages</li>
+                        <li>❌ Never download updates from pop-up ads</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details>
+                <summary>Safe Internet Browsing Tips</summary>
+                <div class="details-content">
+                    <p>The internet is like a big city - there are safe areas and dangerous ones. Here's how to stay in the safe zones:</p>
+                    <h4>Easy Ways to Browse Safely:</h4>
+                    <ul>
+                        <li>🔒 Look for the padlock symbol in your browser
+                            <ul>
+                                <li>✅ https://www.bank.com (Safe)</li>
+                                <li>❌ http://www.bank.com (Not Safe)</li>
+                            </ul>
+                        </li>
+                        <li>🔍 Check website addresses carefully
+                            <ul>
+                                <li>✅ www.amazon.com (Real)</li>
+                                <li>❌ www.amazon-deals.net (Fake)</li>
+                            </ul>
+                        </li>
+                        <li>🛡️ Use private/incognito mode for sensitive browsing</li>
+                        <li>🧹 Clear your browser history regularly</li>
+                        <li>🚫 Close pop-up windows by clicking the X in the corner</li>
+                    </ul>
+                    <div class="real-world-example">
+                        <h4>🌟 Real-Life Example</h4>
+                        <p>Tom got an email with a link to "amazonshopping.net" offering huge discounts. Instead of clicking, he went directly to amazon.com and found the deal wasn't real - it was a scam site!</p>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Protecting Your Personal Information</summary>
+                <div class="details-content">
+                    <p>Your personal information is like money - valuable and worth protecting! Here's what to keep private:</p>
+                    <h4>Information to Protect:</h4>
+                    <ul>
+                        <li>🆔 Social Security Number</li>
+                        <li>💳 Credit Card Details</li>
+                        <li>🏦 Bank Account Numbers</li>
+                        <li>📅 Birth Date</li>
+                        <li>🏠 Home Address</li>
+                        <li>📱 Phone Number</li>
+                    </ul>
+                    <div class="real-world-example">
+                        <h4>🌟 Real-Life Example</h4>
+                        <p>Maria posted her birthday celebration photos with the caption "Happy 25th to me!" Scammers used this info with other details from her profile to try opening credit cards in her name. Now she's more careful about sharing personal details online.</p>
+                    </div>
+                    <h4>Simple Rules to Follow:</h4>
+                    <ul class="feature-list">
+                        <li>✅ Only share information on "need to know" basis</li>
+                        <li>✅ Check privacy settings on social media</li>
+                        <li>✅ Use private messages for personal details</li>
+                        <li>❌ Don't post vacation plans publicly</li>
+                        <li>❌ Never share passwords or PINs</li>
+                    </ul>
+                </div>
+            </details>
+        </main>
+
+        <button class="fab" aria-label="Back to top" title="Back to top">↑</button>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Digital Privacy & Security. All rights reserved.</p>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <ul>
+                        <li><a href="#privacy-policy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Use</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+
+    <div class="scroll-progress"></div>
+
+    <script>
+        // Back to top button
+        const fab = document.querySelector('.fab');
+        window.addEventListener('scroll', () => {
+            fab.style.display = window.scrollY > 300 ? 'flex' : 'none';
+        });
+        fab.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Scroll progress indicator
+        const scrollProgress = document.querySelector('.scroll-progress');
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            scrollProgress.style.transform = `scaleX(${scrolled / 100})`;
+        });
+
+        // Enhanced details animation
+        document.querySelectorAll('details').forEach(detail => {
+            detail.addEventListener('click', e => {
+                if (detail.open) {
+                    document.querySelectorAll('details').forEach(d => {
+                        if (d !== detail) d.open = false;
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
