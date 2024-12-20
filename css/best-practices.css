@@ -2,39 +2,60 @@
 .content-sections {
     max-width: 800px;
     margin: 4rem auto;
+    padding: 0 1.25rem;
+}
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.hero-section h2 {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 /* Details/Summary for Best Practices */
 details {
     margin-bottom: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(37, 99, 235, 0.1);
     border-radius: var(--border-radius);
-    background: rgba(255, 255, 255, 0.9);
+    background: white;
     transition: all 0.3s ease;
-    backdrop-filter: blur(8px);
+    box-shadow: var(--card-shadow);
 }
 
 details[open] {
     box-shadow: var(--hover-shadow);
+    border-color: rgba(37, 99, 235, 0.2);
 }
 
 summary {
-    padding: 1.75rem;
+    padding: 1.5rem 2rem;
     cursor: pointer;
     position: relative;
     font-weight: 600;
+    font-size: 1.1rem;
     list-style: none;
-    background: var(--secondary-color);
+    background: white;
     border-radius: var(--border-radius);
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     gap: 1rem;
+    color: var(--primary-color);
 }
 
 summary:hover {
     background: var(--hover-color);
-    color: var(--primary-color);
 }
 
 summary::-webkit-details-marker {
@@ -57,83 +78,36 @@ details[open] summary::before {
     animation: slideDown 0.3s ease-out;
 }
 
-/* Password Guidelines */
-.password-guidelines {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 2rem;
-    border-radius: var(--border-radius);
-    margin: 2rem 0;
+.details-content p {
+    color: var(--text-color);
+    font-size: 1.05rem;
+    line-height: 1.7;
 }
 
-.password-guidelines h4 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+.details-content ul {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
 }
 
-.password-example {
-    display: flex;
-    margin: 1rem 0;
-    gap: 1rem;
+.details-content ul ul {
+    margin: 0.5rem 0;
 }
 
-.password-example li {
-    flex: 1;
-    padding: 1rem;
-    border-radius: var(--border-radius);
-    background: rgba(255, 255, 255, 0.5);
-}
-
-.password-example .bad {
-    border-left: 4px solid var(--danger-color);
-}
-
-.password-example .good {
-    border-left: 4px solid var(--success-color);
-}
-
-/* Security Tips */
-.security-tips {
-    list-style: none;
-    margin: 2rem 0;
-}
-
-.security-tips li {
-    margin-bottom: 1rem;
-    padding: 1rem 1.5rem;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: var(--border-radius);
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.security-tips li:hover {
-    background: white;
-    transform: translateX(5px);
-}
-
-.security-tips li::before {
-    position: absolute;
-    left: 0.5rem;
-    font-size: 1.2em;
-}
-
-.security-tips li.do::before {
-    content: '✅';
-}
-
-.security-tips li.dont::before {
-    content: '❌';
+.details-content li {
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
 }
 
 /* Real World Example */
 .real-world-example {
-    background: linear-gradient(to right, var(--hover-color), rgba(219, 234, 254, 0.3));
+    background: linear-gradient(135deg, var(--hover-color), white);
     padding: 2rem;
     border-radius: var(--border-radius);
-    margin-top: 2rem;
+    margin: 2rem 0;
     border-left: 4px solid var(--primary-color);
     position: relative;
     overflow: hidden;
+    box-shadow: var(--card-shadow);
 }
 
 .real-world-example::before {
@@ -150,32 +124,95 @@ details[open] summary::before {
     color: var(--primary-color);
     margin-bottom: 1rem;
     font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-/* Easy Setup Guide */
-.setup-guide {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 2rem;
+.real-world-example p {
+    color: var(--text-color);
+    margin-bottom: 0;
+}
+
+/* Feature List */
+.feature-list {
+    list-style: none !important;
+    padding-left: 0 !important;
+}
+
+.feature-list li {
+    padding-left: 2rem;
+    position: relative;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1rem 1rem 1rem 3rem;
     border-radius: var(--border-radius);
-    margin: 2rem 0;
+    transition: all 0.3s ease;
 }
 
-.setup-guide ol {
+.feature-list li:hover {
+    background: white;
+    transform: translateX(5px);
+    box-shadow: var(--card-shadow);
+}
+
+.feature-list li::before {
+    position: absolute;
+    left: 1rem;
+}
+
+/* Category Headers */
+.details-content h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--hover-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Password Examples */
+.details-content ul li ul {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-top: 0.5rem;
+}
+
+.details-content ul li ul li {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+/* Setup Steps */
+.details-content ol {
     list-style: none;
     counter-reset: step;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
+    padding-left: 0;
 }
 
-.setup-guide li {
+.details-content ol li {
     counter-increment: step;
     margin-bottom: 1rem;
-    padding: 1rem 1.5rem 1rem 3rem;
+    padding: 1rem 1rem 1rem 3rem;
     background: rgba(255, 255, 255, 0.5);
     border-radius: var(--border-radius);
     position: relative;
+    transition: all 0.3s ease;
 }
 
-.setup-guide li::before {
+.details-content ol li:hover {
+    background: white;
+    transform: translateX(5px);
+    box-shadow: var(--card-shadow);
+}
+
+.details-content ol li::before {
     content: counter(step);
     position: absolute;
     left: 1rem;
@@ -191,24 +228,70 @@ details[open] summary::before {
     font-weight: bold;
 }
 
-/* Where to Use Section */
-.where-to-use {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin: 2rem 0;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-sections {
+        margin: 2rem auto;
+    }
+
+    .hero-section {
+        padding: 1.5rem;
+    }
+
+    .hero-section h2 {
+        font-size: 1.75rem;
+    }
+
+    summary {
+        padding: 1.25rem;
+        font-size: 1rem;
+    }
+
+    .details-content {
+        padding: 1.5rem;
+    }
+
+    .real-world-example {
+        padding: 1.5rem;
+    }
 }
 
-.where-to-use li {
-    background: rgba(255, 255, 255, 0.5);
-    padding: 1rem;
-    border-radius: var(--border-radius);
-    text-align: center;
-    transition: all 0.3s ease;
+@media (max-width: 480px) {
+    .hero-section h2 {
+        font-size: 1.5rem;
+    }
+
+    summary {
+        padding: 1rem;
+    }
+
+    .details-content {
+        padding: 1.25rem;
+    }
+
+    .real-world-example {
+        padding: 1.25rem;
+    }
 }
 
-.where-to-use li:hover {
-    background: white;
-    transform: translateY(-3px);
-    box-shadow: var(--hover-shadow);
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
+.details-content > * {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.details-content > *:nth-child(1) { animation-delay: 0.1s; }
+.details-content > *:nth-child(2) { animation-delay: 0.2s; }
+.details-content > *:nth-child(3) { animation-delay: 0.3s; }
+.details-content > *:nth-child(4) { animation-delay: 0.4s; }
+.details-content > *:nth-child(5) { animation-delay: 0.5s; }
