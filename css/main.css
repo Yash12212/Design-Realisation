@@ -234,6 +234,10 @@ p {
     content: '\f02d'; /* book */
 }
 
+.main-nav a[href="activities.html"]::before {
+    content: '\f11b'; /* gamepad */
+}
+
 .main-nav a:hover,
 .main-nav a.active {
     color: var(--primary-color);

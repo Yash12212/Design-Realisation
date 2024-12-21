@@ -1,0 +1,433 @@
+/* Activities Page Specific Styles */
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.activity-card {
+    background: var(--surface-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    box-shadow: var(--card-shadow);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+.activity-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.activity-card:hover::before {
+    opacity: 1;
+}
+
+.activity-card h3 {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.activity-card .icon {
+    width: 48px;
+    height: 48px;
+    background: var(--gradient);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    transition: transform var(--transition-normal);
+}
+
+.activity-card:hover .icon {
+    transform: scale(1.1);
+}
+
+/* Difficulty Level Indicators */
+.difficulty {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-full);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: var(--spacing-sm);
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-normal);
+}
+
+.difficulty::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: currentColor;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.difficulty i {
+    position: relative;
+    z-index: 1;
+}
+
+.difficulty.beginner {
+    color: var(--success-color);
+    background: linear-gradient(to right, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.2));
+    box-shadow: 0 2px 4px rgba(34, 197, 94, 0.1);
+}
+
+.difficulty.intermediate {
+    color: var(--warning-color);
+    background: linear-gradient(to right, rgba(245, 158, 11, 0.1), rgba(245, 158, 11, 0.2));
+    box-shadow: 0 2px 4px rgba(245, 158, 11, 0.1);
+}
+
+.difficulty.advanced {
+    color: var(--danger-color);
+    background: linear-gradient(to right, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.2));
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.1);
+}
+
+.difficulty:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.activity-card:hover .difficulty {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Interactive Elements */
+.interactive-content {
+    margin: var(--spacing-md) 0;
+    padding: var(--spacing-md);
+    background: var(--secondary-color);
+    border-radius: var(--border-radius);
+    transition: transform var(--transition-normal);
+}
+
+.interactive-content:focus-within {
+    transform: scale(1.02);
+}
+
+.activity-input {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 2px solid var(--hover-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-sm);
+    transition: all var(--transition-normal);
+    background: var(--white);
+}
+
+.activity-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--hover-color);
+}
+
+/* Password Strength Checker */
+.password-strength-meter {
+    height: 6px;
+    background: var(--hover-color);
+    border-radius: var(--border-radius-full);
+    margin-bottom: var(--spacing-sm);
+    overflow: hidden;
+    position: relative;
+}
+
+.meter-bar {
+    height: 100%;
+    width: 0;
+    background: var(--gradient);
+    transition: all var(--transition-normal);
+    position: relative;
+}
+
+.meter-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.1) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0.1) 75%,
+        transparent 75%
+    );
+    background-size: 1rem 1rem;
+    animation: move-stripes 1s linear infinite;
+}
+
+.password-feedback {
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--light-text);
+    font-weight: 500;
+    text-align: center;
+    transition: all var(--transition-normal);
+}
+
+.password-criteria {
+    list-style: none;
+    margin-bottom: var(--spacing-md);
+    background: var(--white);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.password-criteria li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--light-text);
+    font-size: 0.95rem;
+    padding: var(--spacing-xs);
+    border-radius: var(--border-radius-sm);
+    transition: all var(--transition-normal);
+}
+
+.password-criteria li.met {
+    background: var(--hover-color);
+    color: var(--primary-color);
+    animation: slideIn 0.3s ease-out;
+}
+
+.password-criteria li i {
+    width: 1.2rem;
+    height: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all var(--transition-normal);
+}
+
+.password-criteria li i.fa-times {
+    color: var(--danger-color);
+}
+
+.password-criteria li i.fa-check {
+    color: var(--success-color);
+    transform: scale(1.2);
+}
+
+/* Phishing Email Detection */
+.email-sample {
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--card-shadow);
+    transition: all var(--transition-normal);
+}
+
+.email-header {
+    border-bottom: 2px solid var(--hover-color);
+    padding-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.email-header p {
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.email-body {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.email-body p {
+    margin-bottom: var(--spacing-sm);
+}
+
+.clickable {
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    border-radius: var(--border-radius-sm);
+    padding: 2px 6px;
+    position: relative;
+}
+
+.clickable:hover {
+    background-color: var(--hover-color);
+}
+
+.clickable::after {
+    content: '🔍';
+    position: absolute;
+    right: -1.5rem;
+    opacity: 0;
+    transition: all var(--transition-normal);
+}
+
+.clickable:hover::after {
+    opacity: 0.5;
+}
+
+.found {
+    background-color: var(--success-color);
+    color: var(--white);
+    padding: 2px 8px;
+}
+
+.found::after {
+    content: '✓';
+    opacity: 1;
+}
+
+.found-hint {
+    background: var(--hover-color);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    margin-top: var(--spacing-xs);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    animation: slideIn 0.3s ease-out, pulse 2s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes move-stripes {
+    from { background-position: 0 0; }
+    to { background-position: 1rem 0; }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Animation Applications */
+.activity-button:active i {
+    animation: pulse 0.3s ease-in-out;
+}
+
+.copy-feedback {
+    animation: slideDown 0.3s ease-out, slideUp 0.3s ease-out 2s forwards;
+}
+
+.activity-button {
+    background: var(--gradient);
+    color: var(--white);
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    width: 100%;
+    margin-top: var(--spacing-md);
+}
+
+.activity-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--hover-shadow);
+}
+
+.activity-button:active {
+    transform: translateY(0);
+}
+
+.activity-button i {
+    transition: transform var(--transition-normal);
+}
+
+.activity-button:hover i {
+    transform: rotate(360deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-card {
+        margin-bottom: var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .activity-card {
+        padding: var(--spacing-md);
+    }
+
+    .interactive-content {
+        padding: var(--spacing-sm);
+    }
+}
