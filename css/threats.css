@@ -1,14 +1,14 @@
 /* Content Sections */
 .content-sections {
-    max-width: 800px;
-    margin: 4rem auto;
-    padding: 0 1.25rem;
+    max-width: 750px;
+    margin: 3rem auto;
+    padding: 0 var(--spacing-md);
 }
 
 .hero-section {
     text-align: center;
-    margin-bottom: 3rem;
-    padding: 2rem;
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg);
     background: var(--surface-color);
     border-radius: var(--border-radius);
     box-shadow: var(--card-shadow);
@@ -53,8 +53,8 @@
 .threats-overview {
     background: var(--surface-color);
     border-radius: var(--border-radius);
-    padding: 2rem;
-    margin: 2rem 0;
+    padding: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
     box-shadow: var(--card-shadow);
     transition: all var(--transition-normal);
 }
@@ -76,11 +76,11 @@
     padding: 0;
     margin: 0;
     display: grid;
-    gap: 1.5rem;
+    gap: var(--spacing-md);
 }
 
 .threats-overview li {
-    padding: 1.5rem;
+    padding: var(--spacing-md);
     background: var(--secondary-color);
     border-radius: var(--border-radius);
     border: 1px solid rgba(37, 99, 235, 0.1);
@@ -89,7 +89,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.6rem;
 }
 
 .threats-overview li strong {
@@ -202,7 +202,7 @@ details[open] summary::before {
 }
 
 .details-content {
-    padding: 2rem;
+    padding: var(--spacing-lg);
     animation: slideDown var(--transition-normal);
 }
 
@@ -224,14 +224,14 @@ details[open] summary::before {
 }
 
 .details-content ul li {
-    margin-bottom: 1rem;
-    padding: 1rem 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
     background: var(--secondary-color);
     border-radius: var(--border-radius);
     transition: all var(--transition-normal);
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.6rem;
     position: relative;
     overflow: hidden;
 }
@@ -306,10 +306,10 @@ details[open] summary::before {
 /* Real World Example */
 .real-world-example {
     background: linear-gradient(135deg, var(--hover-color), var(--surface-color));
-    padding: 2rem;
+    padding: var(--spacing-lg);
     border-radius: var(--border-radius);
-    margin: 2rem 0;
-    border-left: 4px solid var(--primary-color);
+    margin: var(--spacing-lg) 0;
+    border-left: 3px solid var(--primary-color);
     position: relative;
     overflow: hidden;
     box-shadow: var(--card-shadow);
@@ -356,10 +356,10 @@ details[open] summary::before {
 /* Warning Box */
 .warning-box {
     background: linear-gradient(135deg, #fff3e0, var(--surface-color));
-    padding: 2rem;
-    margin: 2rem 0;
+    padding: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
     border-radius: var(--border-radius);
-    border-left: 4px solid var(--warning-color);
+    border-left: 3px solid var(--warning-color);
     position: relative;
     box-shadow: var(--card-shadow);
     transition: all var(--transition-normal);
