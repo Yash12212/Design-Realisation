@@ -1,27 +1,85 @@
 /* Activities Page Specific Styles */
 .activities-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    max-width: 1100px;
-    margin: 0 auto var(--spacing-md);
-    gap: var(--spacing-md);
-    padding: 0 var(--spacing-sm);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 1200px;
+    margin: var(--spacing-lg) auto;
+    gap: var(--spacing-xl);
+    padding: 0 var(--spacing-lg);
+    grid-auto-flow: dense;
 }
 
 .activity-card {
     background: var(--surface-color);
     border-radius: var(--border-radius);
-    padding: var(--spacing-sm);
+    padding: var(--spacing-lg);
     box-shadow: var(--card-shadow);
     transition: all var(--transition-normal);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    min-height: 220px;
+    cursor: pointer;
 }
 
-.activity-card:hover {
+.activity-card::after {
+    content: 'Click to expand';
+    position: absolute;
+    bottom: var(--spacing-md);
+    right: var(--spacing-md);
+    background: var(--primary-color);
+    color: white;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    font-size: 0.85rem;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: all var(--transition-normal);
+}
+
+.activity-card:not(.expanded):hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.activity-card p {
+    color: var(--light-text);
+    line-height: 1.6;
+    margin: 0;
+    margin-bottom: var(--spacing-lg);
+}
+
+.activity-card:not(.expanded):hover {
     transform: translateY(-5px);
     box-shadow: var(--hover-shadow);
 }
+
+.activity-card.expanded {
+    min-height: auto;
+    cursor: default;
+    grid-column: 1 / -1;
+    animation: expandCard 0.3s ease-out;
+}
+
+/* When a card is expanded, make other cards fill available space */
+.activity-card:not(.expanded) {
+    grid-column: span 1;
+    transition: all var(--transition-normal), grid-column 0s;
+}
+
+@keyframes expandCard {
+    from {
+        opacity: 0.8;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 
 .activity-card::before {
     content: '';
@@ -44,7 +102,8 @@
     align-items: center;
     gap: var(--spacing-sm);
     color: var(--primary-color);
-    margin-bottom: var(--spacing-sm);
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-xs);
 }
 
 .activity-card .icon {
@@ -66,25 +125,42 @@
 /* Interactive Elements */
 .interactive-content {
     margin: var(--spacing-md) 0;
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     background: var(--surface-color);
     border: 1px solid var(--hover-color);
     border-radius: var(--border-radius);
     transition: transform var(--transition-normal);
     box-shadow: var(--card-shadow);
+    display: none;
+}
+
+.activity-card.expanded .interactive-content {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .interactive-content:focus-within {
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 .activity-input {
     width: 100%;
-    padding: var(--spacing-md);
+    padding: var(--spacing-sm);
     border: 2px solid var(--hover-color);
     border-radius: var(--border-radius);
     font-size: 1rem;
-    margin: var(--spacing-md) 0;
+    margin: var(--spacing-sm) 0;
     transition: all var(--transition-normal);
     background: var(--white);
 }
@@ -104,29 +180,31 @@
 
 .activity-steps li {
     position: relative;
-    padding: var(--spacing-xs) var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    padding-left: 40px;
     margin-bottom: var(--spacing-xs);
     background: var(--hover-color);
     border-radius: var(--border-radius);
     font-weight: 500;
     counter-increment: step;
+    line-height: 1.4;
 }
 
 .activity-steps li::before {
     content: counter(step);
     position: absolute;
-    left: -4px;
+    left: 8px;
     top: 50%;
     transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     background: var(--primary-color);
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 600;
 }
 
@@ -134,49 +212,31 @@
 .difficulty {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: var(--spacing-xs);
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: var(--border-radius-full);
     font-size: 0.85rem;
-    font-weight: 600;
-    margin-top: var(--spacing-xs);
-    position: relative;
-    overflow: hidden;
-}
-
-.difficulty::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: currentColor;
-    opacity: 0.1;
-    z-index: 0;
+    font-weight: 500;
+    margin-top: auto;
+    background: var(--white);
+    box-shadow: var(--card-shadow);
+    align-self: flex-start;
 }
 
 .difficulty i {
-    position: relative;
-    z-index: 1;
+    font-size: 1rem;
 }
 
 .difficulty.beginner {
     color: var(--success-color);
-    background: linear-gradient(to right, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.2));
-    box-shadow: 0 2px 4px rgba(34, 197, 94, 0.1);
 }
 
 .difficulty.intermediate {
     color: var(--warning-color);
-    background: linear-gradient(to right, rgba(245, 158, 11, 0.1), rgba(245, 158, 11, 0.2));
-    box-shadow: 0 2px 4px rgba(245, 158, 11, 0.1);
 }
 
 .difficulty.advanced {
     color: var(--danger-color);
-    background: linear-gradient(to right, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.2));
-    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.1);
 }
 
 /* Password Strength Checker */
@@ -237,6 +297,13 @@
 }
 
 /* Activity Buttons */
+.phishing-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
 .activity-button {
     background: var(--gradient);
     color: var(--white);
@@ -251,7 +318,6 @@
     justify-content: center;
     gap: var(--spacing-sm);
     width: 100%;
-    margin-top: var(--spacing-md);
     font-size: 1rem;
 }
 
@@ -272,10 +338,156 @@
     transform: rotate(360deg);
 }
 
+/* Success Message Animation */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.success-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--success-color);
+    color: white;
+    padding: 20px 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--hover-shadow);
+    z-index: 1000;
+    text-align: center;
+    animation: fadeInScale 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+}
+
+.success-message i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.success-message h4 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.success-message p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Phishing Email Elements */
+.phishing-instructions {
+    background: var(--hover-color);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.phishing-instructions p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.phishing-instructions .score {
+    background: var(--white);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.email-sample {
+    background: var(--surface-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    margin: var(--spacing-md) 0;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--hover-color);
+}
+
+.email-header {
+    border-bottom: 1px solid var(--hover-color);
+    padding-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.email-header p {
+    margin: var(--spacing-xs) 0;
+}
+
+.clickable-element {
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    position: relative;
+    padding: 2px 4px;
+    margin: -2px -4px;
+}
+
+.clickable-element:hover {
+    background: var(--hover-color);
+    border-radius: var(--border-radius-sm);
+}
+
+.clickable-element.found {
+    background: var(--success-color);
+    color: white;
+    border-radius: var(--border-radius-sm);
+}
+
+.suspicious-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.suspicious-link:hover {
+    text-decoration: underline;
+}
+
+/* Phishing Indicators */
+.phishing-indicators {
+    margin-top: var(--spacing-md);
+}
+
+.indicator-list h4 {
+    margin: 0 0 var(--spacing-sm);
+    color: var(--primary-color);
+}
+
+.found-hint {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin: var(--spacing-xs) 0;
+    padding: var(--spacing-sm);
+    background: var(--hover-color);
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease-out;
+    color: var(--text-color);
+}
+
+.found-hint i {
+    color: var(--success-color);
+    font-size: 1.1em;
+}
+
 /* Responsive Design */
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
     .activities-grid {
-        grid-template-columns: repeat(2, 1fr);
+        max-width: 900px;
+        gap: var(--spacing-lg);
     }
 }
 
@@ -284,6 +496,12 @@
         grid-template-columns: 1fr;
         padding: 0 var(--spacing-md);
         gap: var(--spacing-lg);
+        margin: var(--spacing-lg) auto;
+    }
+    
+    .activity-card {
+        min-height: auto;
+        padding: var(--spacing-lg);
     }
 }
 

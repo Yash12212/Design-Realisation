@@ -72,29 +72,37 @@
                     </h3>
                     <p>Learn to identify and avoid phishing attempts by analyzing real-world examples.</p>
                     <div class="interactive-content">
-                        <div class="email-sample">
-                            <div class="email-header">
-                                <p><strong>From:</strong> <span id="email-from">security@amazzon-account.com</span></p>
-                                <p><strong>Subject:</strong> <span id="email-subject">Urgent: Your Account Security</span></p>
-                            </div>
-                            <div class="email-body">
-                                <p>Dear Valued Customer,</p>
-                                <p>We have detected unusual activity on your account. Please verify your information immediately by clicking the link below:</p>
-                                <p><a href="#" class="suspicious-link">https://amazzon-secure-verify.net/account</a></p>
-                                <p>If you do not verify within 24 hours, your account will be suspended.</p>
-                                <p>Best regards,<br>Amazon Security Team</p>
-                            </div>
+                        <div class="phishing-instructions">
+                            <p><i class="fas fa-info-circle"></i> Click on suspicious elements in the email to identify phishing indicators. Find all 5 to win!</p>
+                            <div class="score">Found: <span id="phishing-score">0</span>/5 indicators</div>
                         </div>
+                    <div class="email-sample">
+                        <div class="email-header">
+                            <p><strong>From:</strong> <span id="email-from" class="clickable-element"></span></p>
+                            <p><strong>To:</strong> <span>user@email.com</span></p>
+                            <p><strong>Subject:</strong> <span id="email-subject" class="clickable-element"></span></p>
+                            <p><strong>Date:</strong> <span id="email-date"></span></p>
+                        </div>
+                        <div id="email-body" class="email-body">
+                            <!-- Email content will be dynamically inserted here -->
+                        </div>
+                    </div>
                         <div class="phishing-indicators">
-                            <p>Click on the suspicious elements you find:</p>
                             <div class="indicator-list">
-                                <div class="score">Score: <span id="phishing-score">0</span>/5</div>
+                                <h4>Phishing Indicators Found:</h4>
+                                <!-- Hints will appear here when elements are clicked -->
                             </div>
                         </div>
-                        <button class="activity-button" onclick="resetPhishingExercise()">
-                            <i class="fas fa-sync-alt"></i>
-                            Try Another Example
-                        </button>
+                        <div class="phishing-actions">
+                            <button class="activity-button" onclick="showPhishingHints()">
+                                <i class="fas fa-lightbulb"></i>
+                                Show Hints
+                            </button>
+                            <button class="activity-button" onclick="loadNextPhishingExample()">
+                                <i class="fas fa-sync-alt"></i>
+                                Try Another Example
+                            </button>
+                        </div>
                     </div>
                     <div class="difficulty intermediate">
                         <i class="fas fa-star-half-alt"></i> Intermediate
@@ -191,271 +199,6 @@
 
     <div class="scroll-progress"></div>
 
-    <script>
-        // Back to top button
-        const fab = document.querySelector('.fab');
-        window.addEventListener('scroll', () => {
-            fab.style.display = window.scrollY > 300 ? 'flex' : 'none';
-        });
-        fab.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Scroll progress indicator
-        const scrollProgress = document.querySelector('.scroll-progress');
-        window.addEventListener('scroll', () => {
-            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (window.scrollY / windowHeight) * 100;
-            scrollProgress.style.transform = `scaleX(${scrolled / 100})`;
-        });
-
-        // Password Strength Checker
-        const passwordInput = document.getElementById('password-input');
-        const meterBar = document.querySelector('.meter-bar');
-        const feedback = document.querySelector('.password-feedback');
-        const criteria = document.querySelectorAll('.password-criteria li');
-
-        function checkPasswordStrength(password) {
-            let strength = 0;
-            const checks = {
-                length: password.length >= 12,
-                uppercase: /[A-Z]/.test(password),
-                lowercase: /[a-z]/.test(password),
-                number: /[0-9]/.test(password),
-                special: /[^A-Za-z0-9]/.test(password)
-            };
-
-            // Update criteria icons
-            criteria.forEach(item => {
-                const criterion = item.getAttribute('data-criterion');
-                const icon = item.querySelector('i');
-                if (checks[criterion]) {
-                    icon.className = 'fas fa-check';
-                    strength += 20;
-                } else {
-                    icon.className = 'fas fa-times';
-                }
-            });
-
-            // Update meter and feedback
-            meterBar.style.width = strength + '%';
-            if (strength < 40) {
-                feedback.textContent = 'Weak password';
-                feedback.style.color = 'var(--danger-color)';
-                meterBar.style.background = 'var(--danger-color)';
-            } else if (strength < 80) {
-                feedback.textContent = 'Moderate password';
-                feedback.style.color = 'var(--warning-color)';
-                meterBar.style.background = 'var(--warning-color)';
-            } else {
-                feedback.textContent = 'Strong password!';
-                feedback.style.color = 'var(--success-color)';
-                meterBar.style.background = 'var(--success-color)';
-            }
-        }
-
-        function generatePassword() {
-            const length = 16;
-            const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?';
-            let password = '';
-            
-            // Ensure at least one of each required character type
-            password += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(Math.random() * 26)];
-            password += 'abcdefghijklmnopqrstuvwxyz'[Math.floor(Math.random() * 26)];
-            password += '0123456789'[Math.floor(Math.random() * 10)];
-            password += '!@#$%^&*()_+-=[]{}|;:,.<>?'[Math.floor(Math.random() * 29)];
-
-            // Fill the rest with random characters
-            for (let i = password.length; i < length; i++) {
-                password += charset[Math.floor(Math.random() * charset.length)];
-            }
-
-            // Shuffle the password
-            password = password.split('').sort(() => Math.random() - 0.5).join('');
-            
-            passwordInput.value = password;
-            passwordInput.type = 'text';
-
-            // Add copy button
-            const copyBtn = document.createElement('button');
-            copyBtn.className = 'activity-button';
-            copyBtn.style.marginTop = '10px';
-            copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copy Password';
-            copyBtn.onclick = () => copyToClipboard(password);
-
-            // Add it after the password input
-            const existingCopyBtn = passwordInput.nextElementSibling;
-            if (existingCopyBtn && existingCopyBtn.tagName === 'BUTTON') {
-                existingCopyBtn.remove();
-            }
-            passwordInput.parentNode.insertBefore(copyBtn, passwordInput.nextElementSibling);
-
-            // Hide password after delay
-            setTimeout(() => {
-                passwordInput.type = 'password';
-                copyBtn.remove();
-            }, 5000);
-
-            checkPasswordStrength(password);
-        }
-
-        // Initialize password checker
-        passwordInput.addEventListener('input', (e) => {
-            checkPasswordStrength(e.target.value);
-            // Add visual feedback for criteria being met
-            criteria.forEach(item => {
-                if (item.querySelector('i').className.includes('fa-check')) {
-                    item.classList.add('met');
-                } else {
-                    item.classList.remove('met');
-                }
-            });
-        });
-
-        // Add copy button functionality
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                const feedback = document.createElement('div');
-                feedback.textContent = 'Password copied!';
-                feedback.style.cssText = `
-                    position: fixed;
-                    top: 20px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    background: var(--success-color);
-                    color: white;
-                    padding: 10px 20px;
-                    border-radius: var(--border-radius);
-                    box-shadow: var(--hover-shadow);
-                    z-index: 1000;
-                    animation: slideDown 0.3s ease-out;
-                `;
-                document.body.appendChild(feedback);
-                setTimeout(() => {
-                    feedback.style.animation = 'slideUp 0.3s ease-out';
-                    feedback.addEventListener('animationend', () => feedback.remove());
-                }, 2000);
-            });
-        }
-
-        // Phishing Email Detection
-        const phishingElements = {
-            sender: {
-                element: document.getElementById('email-from'),
-                hint: 'Check the sender email address for misspellings',
-                found: false
-            },
-            subject: {
-                element: document.getElementById('email-subject'),
-                hint: 'Urgent messages are often used to create panic',
-                found: false
-            },
-            link: {
-                element: document.querySelector('.suspicious-link'),
-                hint: 'Check the URL for misspellings and unusual domains',
-                found: false
-            },
-            urgency: {
-                element: document.querySelector('.email-body p:nth-child(3)'),
-                hint: 'Time pressure is a common phishing tactic',
-                found: false
-            },
-            greeting: {
-                element: document.querySelector('.email-body p:first-child'),
-                hint: 'Generic greetings are suspicious',
-                found: false
-            }
-        };
-
-        let phishingScore = 0;
-        const scoreElement = document.getElementById('phishing-score');
-        const indicatorList = document.querySelector('.indicator-list');
-
-        // Make elements clickable
-        Object.entries(phishingElements).forEach(([key, data]) => {
-            const element = data.element;
-            element.classList.add('clickable');
-            
-            element.addEventListener('click', () => {
-                if (!data.found) {
-                    data.found = true;
-                    phishingScore++;
-                    scoreElement.textContent = phishingScore;
-                    element.classList.add('found');
-                    
-                    // Add hint
-                    const hintElement = document.createElement('p');
-                    hintElement.innerHTML = `<i class="fas fa-check"></i> ${data.hint}`;
-                    hintElement.classList.add('found-hint');
-                    indicatorList.appendChild(hintElement);
-
-                    if (phishingScore === 5) {
-                        setTimeout(() => {
-                            alert('Great job! You found all the phishing indicators!');
-                        }, 500);
-                    }
-                }
-            });
-        });
-
-        const phishingExamples = [
-            {
-                from: 'security@amazzon-account.com',
-                subject: 'Urgent: Your Account Security',
-                body: [
-                    'Dear Valued Customer,',
-                    'We have detected unusual activity on your account. Please verify your information immediately by clicking the link below:',
-                    'https://amazzon-secure-verify.net/account',
-                    'If you do not verify within 24 hours, your account will be suspended.',
-                    'Best regards,\nAmazon Security Team'
-                ]
-            },
-            {
-                from: 'paypa1-support@secure-center.com',
-                subject: 'Payment Received - Action Required',
-                body: [
-                    'Hello PayPal User,',
-                    'We have processed a payment of $750.00 from your account.',
-                    'https://paypa1-secure-login.net/dispute',
-                    'If you did not authorize this transaction, click the link above immediately.',
-                    'Regards,\nPayPal Support'
-                ]
-            }
-        ];
-
-        function resetPhishingExercise() {
-            // Reset score and found status
-            phishingScore = 0;
-            scoreElement.textContent = '0';
-            
-            // Clear found hints
-            while (indicatorList.children.length > 1) {
-                indicatorList.removeChild(indicatorList.lastChild);
-            }
-
-            // Reset element styles
-            Object.values(phishingElements).forEach(data => {
-                data.found = false;
-                data.element.classList.remove('found');
-            });
-
-            // Load new example
-            const example = phishingExamples[Math.floor(Math.random() * phishingExamples.length)];
-            document.getElementById('email-from').textContent = example.from;
-            document.getElementById('email-subject').textContent = example.subject;
-            
-            const emailBody = document.querySelector('.email-body');
-            emailBody.innerHTML = example.body.map(line => `<p>${line}</p>`).join('');
-            
-            // Update elements reference for new content
-            phishingElements.greeting.element = emailBody.querySelector('p:first-child');
-            phishingElements.urgency.element = emailBody.querySelector('p:nth-child(3)');
-            
-            // Make new elements clickable
-            Object.values(phishingElements).forEach(data => {
-                data.element.classList.add('clickable');
-            });
-        }
-    </script>
+    <script src="js/activities.js"></script>
 </body>
 </html>
