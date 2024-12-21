@@ -48,8 +48,8 @@
 }
 
 .activity-card .icon {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     background: var(--gradient);
     border-radius: var(--border-radius);
     display: flex;
@@ -104,7 +104,7 @@
 
 .activity-steps li {
     position: relative;
-    padding: var(--spacing-xs) var(--spacing-md);
+    padding: var(--spacing-xs) var(--spacing-sm);
     margin-bottom: var(--spacing-xs);
     background: var(--hover-color);
     border-radius: var(--border-radius);
@@ -181,7 +181,7 @@
 
 /* Password Strength Checker */
 .password-strength-meter {
-    height: 4px;
+    height: 3px;
     background: var(--hover-color);
     border-radius: var(--border-radius-full);
     margin-bottom: var(--spacing-xs);
@@ -207,9 +207,9 @@
 
 .password-criteria {
     list-style: none;
-    margin: var(--spacing-md) 0;
+    margin: var(--spacing-sm) 0;
     background: var(--white);
-    padding: var(--spacing-md);
+    padding: var(--spacing-sm);
     border-radius: var(--border-radius);
     box-shadow: var(--card-shadow);
 }
