@@ -1,9 +1,11 @@
 /* Activities Page Specific Styles */
 .activities-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-xl);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 1200px;
+    margin: 0 auto var(--spacing-xl);
+    gap: var(--spacing-xl);
+    padding: 0 var(--spacing-lg);
 }
 
 .activity-card {
@@ -61,6 +63,73 @@
     transform: scale(1.1);
 }
 
+/* Interactive Elements */
+.interactive-content {
+    margin: var(--spacing-lg) 0;
+    padding: var(--spacing-lg);
+    background: var(--surface-color);
+    border: 1px solid var(--hover-color);
+    border-radius: var(--border-radius);
+    transition: transform var(--transition-normal);
+    box-shadow: var(--card-shadow);
+}
+
+.interactive-content:focus-within {
+    transform: scale(1.02);
+}
+
+.activity-input {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 2px solid var(--hover-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-sm);
+    transition: all var(--transition-normal);
+    background: var(--white);
+}
+
+.activity-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--hover-color);
+}
+
+/* Activity Steps */
+.activity-steps {
+    list-style: none;
+    margin: var(--spacing-md) 0;
+    padding: 0;
+}
+
+.activity-steps li {
+    position: relative;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+    background: var(--hover-color);
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    counter-increment: step;
+}
+
+.activity-steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
 /* Difficulty Level Indicators */
 .difficulty {
     display: inline-flex;
@@ -73,7 +142,6 @@
     margin-top: var(--spacing-sm);
     position: relative;
     overflow: hidden;
-    transition: all var(--transition-normal);
 }
 
 .difficulty::before {
@@ -111,46 +179,6 @@
     box-shadow: 0 2px 4px rgba(239, 68, 68, 0.1);
 }
 
-.difficulty:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.activity-card:hover .difficulty {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Interactive Elements */
-.interactive-content {
-    margin: var(--spacing-md) 0;
-    padding: var(--spacing-md);
-    background: var(--secondary-color);
-    border-radius: var(--border-radius);
-    transition: transform var(--transition-normal);
-}
-
-.interactive-content:focus-within {
-    transform: scale(1.02);
-}
-
-.activity-input {
-    width: 100%;
-    padding: var(--spacing-sm);
-    border: 2px solid var(--hover-color);
-    border-radius: var(--border-radius);
-    font-size: 1rem;
-    margin-bottom: var(--spacing-sm);
-    transition: all var(--transition-normal);
-    background: var(--white);
-}
-
-.activity-input:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px var(--hover-color);
-}
-
 /* Password Strength Checker */
 .password-strength-meter {
     height: 6px;
@@ -169,33 +197,12 @@
     position: relative;
 }
 
-.meter-bar::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0.1) 25%,
-        transparent 25%,
-        transparent 50%,
-        rgba(255, 255, 255, 0.1) 50%,
-        rgba(255, 255, 255, 0.1) 75%,
-        transparent 75%
-    );
-    background-size: 1rem 1rem;
-    animation: move-stripes 1s linear infinite;
-}
-
 .password-feedback {
     font-size: 0.95rem;
     margin-bottom: var(--spacing-sm);
     color: var(--light-text);
     font-weight: 500;
     text-align: center;
-    transition: all var(--transition-normal);
 }
 
 .password-criteria {
@@ -225,158 +232,7 @@
     animation: slideIn 0.3s ease-out;
 }
 
-.password-criteria li i {
-    width: 1.2rem;
-    height: 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: all var(--transition-normal);
-}
-
-.password-criteria li i.fa-times {
-    color: var(--danger-color);
-}
-
-.password-criteria li i.fa-check {
-    color: var(--success-color);
-    transform: scale(1.2);
-}
-
-/* Phishing Email Detection */
-.email-sample {
-    background: var(--white);
-    padding: var(--spacing-md);
-    border-radius: var(--border-radius);
-    margin-bottom: var(--spacing-md);
-    box-shadow: var(--card-shadow);
-    transition: all var(--transition-normal);
-}
-
-.email-header {
-    border-bottom: 2px solid var(--hover-color);
-    padding-bottom: var(--spacing-sm);
-    margin-bottom: var(--spacing-sm);
-}
-
-.email-header p {
-    margin-bottom: var(--spacing-xs);
-    font-size: 0.95rem;
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-}
-
-.email-body {
-    color: var(--text-color);
-    line-height: 1.6;
-}
-
-.email-body p {
-    margin-bottom: var(--spacing-sm);
-}
-
-.clickable {
-    cursor: pointer;
-    transition: all var(--transition-normal);
-    border-radius: var(--border-radius-sm);
-    padding: 2px 6px;
-    position: relative;
-}
-
-.clickable:hover {
-    background-color: var(--hover-color);
-}
-
-.clickable::after {
-    content: '🔍';
-    position: absolute;
-    right: -1.5rem;
-    opacity: 0;
-    transition: all var(--transition-normal);
-}
-
-.clickable:hover::after {
-    opacity: 0.5;
-}
-
-.found {
-    background-color: var(--success-color);
-    color: var(--white);
-    padding: 2px 8px;
-}
-
-.found::after {
-    content: '✓';
-    opacity: 1;
-}
-
-.found-hint {
-    background: var(--hover-color);
-    padding: var(--spacing-sm);
-    border-radius: var(--border-radius);
-    margin-top: var(--spacing-xs);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    animation: slideIn 0.3s ease-out, pulse 2s ease-in-out infinite;
-}
-
-/* Animations */
-@keyframes move-stripes {
-    from { background-position: 0 0; }
-    to { background-position: 1rem 0; }
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translate(-50%, -20px);
-    }
-    to {
-        opacity: 1;
-        transform: translate(-50%, 0);
-    }
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 1;
-        transform: translate(-50%, 0);
-    }
-    to {
-        opacity: 0;
-        transform: translate(-50%, -20px);
-    }
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-/* Animation Applications */
-.activity-button:active i {
-    animation: pulse 0.3s ease-in-out;
-}
-
-.copy-feedback {
-    animation: slideDown 0.3s ease-out, slideUp 0.3s ease-out 2s forwards;
-}
-
+/* Activity Buttons */
 .activity-button {
     background: var(--gradient);
     color: var(--white);
@@ -412,13 +268,17 @@
 }
 
 /* Responsive Design */
+@media (min-width: 1200px) {
+    .activities-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .activities-grid {
         grid-template-columns: 1fr;
-    }
-
-    .activity-card {
-        margin-bottom: var(--spacing-md);
+        padding: 0 var(--spacing-md);
+        gap: var(--spacing-lg);
     }
 }
 
